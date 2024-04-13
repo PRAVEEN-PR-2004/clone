@@ -6,6 +6,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Topbar from "./Topbar";
 import logog from "../assets/GT-Holidays-Logo.jpg";
 import { useEffect, useState } from "react";
+import './Appbar.css'
 
 function OffcanvasExample() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -157,9 +158,13 @@ function OffcanvasExample() {
                     <NavDropdown.Item href="#action5">Salem</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
+                  <Navbar.Text className="justify-content-end">
+                  <span className='noo' style={{color:'black'}}>+91 9195412160</span>
+                </Navbar.Text>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
+         
         </Navbar>
       ))}
     </>

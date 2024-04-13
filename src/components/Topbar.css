@@ -1,0 +1,25 @@
+.icon-container {
+    display: inline-block;
+    
+  }
+  
+  .mail-address {
+    color: white;
+    
+    font-size: small;
+    font-weight: bold;
+  }
+  .add{
+    color: white;
+    font-weight: bold;
+}
+.no {
+    color: white;
+    margin-right: 10px;
+    font-size: small;
+    font-weight: bold;
+    
+  }
+  .navbar-text {
+    white-space: nowrap;
+  }

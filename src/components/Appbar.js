@@ -1,29 +1,44 @@
 import Container from "react-bootstrap/Container";
-
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Topbar from "./Topbar";
 import logog from "../assets/GT-Holidays-Logo.jpg";
+import { useEffect, useState } from "react";
 
 function OffcanvasExample() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isSmallScreen = windowWidth <= 768; // Define the screen width breakpoint for small screens
+
   return (
     <>
       <Topbar />
       {["xxl"].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
-          <Navbar.Brand
+            <Navbar.Brand
               href="#home"
-              className="d-flex justify-content-center justify-content-md-start ml-md-3"
-              style={{ marginLeft: '40px' }}
+              className="d-flex justify-content-center  ml-md-3"
             >
               <img
                 src={logog}
-                width="250"
+                width={isSmallScreen ? "150" : "250"} // Adjust the width based on screen size
                 height="100"
-                className="d-inline-block align-top img-fluid mx-auto"
+                className="d-inline-block align-top img-fluid mx-auto img-responsive"
                 alt="GT Holidays Logo"
               />
             </Navbar.Brand>

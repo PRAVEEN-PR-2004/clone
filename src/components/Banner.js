@@ -22,7 +22,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className='d-block w-100 carousel-image'
-            src={require('../assets/green.jpg')}
+            src={require('../assets/lake.jpg')}
             alt=''
           />
           <Carousel.Caption>

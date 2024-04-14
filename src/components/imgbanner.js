@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import holidaysImage from "../assets/holidays.jpeg";
 
-const imgbanner = () => {
+const ImgBanner = () => {
   return (
-    <div>
-        
+    <div className="container">
+      <img src={holidaysImage} alt="Holidays Banner" style={{ width: '100%', height: 'auto' }} />
     </div>
-  )
-}
+  );
+};
 
-export default imgbanner
+export default ImgBanner;

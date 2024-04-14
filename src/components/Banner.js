@@ -4,7 +4,7 @@ import './Banner.css';
 
 const Banner = () => {
   return (
-    <div className="banner-container">
+    <div className="banner-container" style={{display:'flex',flexDirection:'column'}}>
       <Carousel fade>
         <Carousel.Item>
           <img

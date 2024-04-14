@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import Topbar from "./Topbar";
+
 import logog from "../assets/GT-Holidays-Logo.jpg";
 import { useEffect, useState } from "react";
 import './Appbar.css'
@@ -27,9 +27,9 @@ function OffcanvasExample() {
 
   return (
     <>
-      <Topbar />
+      
       {["xxl"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar key={expand} expand={expand} className="changenav mb-3 sticky-top">
           <Container fluid>
             <Navbar.Brand
               href="#home"

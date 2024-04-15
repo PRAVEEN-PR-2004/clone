@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import TextCard from '../components/TextCard'
 import ImgBanner from '../components/imgbanner'
 import Topbar from '../components/Topbar'
+import Spot from '../components/Spot'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Banner/>
        <TextCard/>
       <ImgBanner/>
+      <Spot/>
 
        
     </div>

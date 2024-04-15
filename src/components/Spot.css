@@ -1,0 +1,48 @@
+.tbox
+{
+    color: black;
+    background-color: yellow;
+    font-size: 18px;
+    padding: 7px;
+    
+   
+}
+.tbox:hover
+{
+    background-color: black;
+    color: rgb(196, 189, 189);
+}
+
+
+
+.overlay-container {
+    position: relative;
+    min-width: 100%;
+    height: 400px;
+    overflow: hidden;
+    
+  }
+  
+  .overlay-container img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .overlay-content span {
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+  }
+  
+  

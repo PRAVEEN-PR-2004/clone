@@ -37,6 +37,7 @@ const Banner = () => {
             className='d-block w-100 carousel-image'
             src={require('../assets/mountain.jpg')}
             alt=''
+            style={{height:'100%'}}
           />
           <Carousel.Caption>
             <h3 style={{fontWeight:'700',color:'yellow'}}>adventurous</h3>

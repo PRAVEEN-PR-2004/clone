@@ -45,4 +45,13 @@
     font-weight: 400;
   }
   
-  
+  @media (max-width: 768px) {
+    .overlay-content span {
+      font-size: 18px; /* Adjust the font size for smaller screens */
+    }
+  }
+  @media (max-width: 768px) {
+    .heading {
+      text-align: center; /* Adjust the font size for smaller screens */
+    }
+  }

@@ -4,8 +4,9 @@ import './Spot.css'
 const Spot = () => {
   return (
     <div>
-      <Container>
-        <Row className='mt-5 mb-2'>
+      <Container className='mt-5'>
+      <h4 className="heading">Popular Packages</h4>
+        <Row className='mt-3 mb-2'>
           <Col lg={8} md={12} sm={12} className="mb-4">
             <div className='overlay-container'>
               <img src={require('../assets/kerala.jpg')} alt="GTHOLIDAYS" className="img-fluid" style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }} />

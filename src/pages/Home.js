@@ -5,6 +5,7 @@ import TextCard from '../components/TextCard'
 import ImgBanner from '../components/imgbanner'
 import Topbar from '../components/Topbar'
 import Spot from '../components/Spot'
+import Content from '../components/Content'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Spot/>
        <TextCard/>
       <ImgBanner/>
+      <Content/>
       
 
        

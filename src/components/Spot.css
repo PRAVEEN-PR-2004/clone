@@ -1,15 +1,15 @@
 .tbox
 {
-    color: black;
-    background-color: yellow;
-    font-size: 18px;
-    padding: 7px;
-    
-   
+  background-color: yellow;
+  padding: 10px;
+  font-size: medium;
+  font-weight: 500;
+  color: black;
 }
+
 .tbox:hover
 {
-    background-color: black;
+    background-color: rgb(41, 39, 39);
     color: rgb(196, 189, 189);
 }
 
@@ -39,10 +39,11 @@
     z-index: 1;
   }
   
-  .overlay-content span {
+  .thead {
     font-size: 24px;
     color: white;
     font-weight: 400;
+   
   }
   
   @media (max-width: 768px) {

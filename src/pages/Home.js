@@ -7,6 +7,7 @@ import Topbar from '../components/Topbar'
 import Spot from '../components/Spot'
 import Content from '../components/Content'
 
+
 const Home = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const Home = () => {
        <TextCard/>
       <ImgBanner/>
       <Content/>
+
       
 
        

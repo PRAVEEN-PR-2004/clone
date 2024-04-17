@@ -13,6 +13,8 @@ const Spot = () => {
               <div className="overlay-content">
                 <span className='thead'>Text Overlay 1</span>
                 <br></br>
+                <br></br>
+                
            
                 <span className='tbox'>Text Overlay 2</span>
               </div>
@@ -24,6 +26,8 @@ const Spot = () => {
               <div className="overlay-content">
                 <span className='thead'>Text Overlay 2</span>
                 <br></br>
+                <br></br>
+                
            
                 <span className='tbox' >Text Overlay 2</span>
               </div>
@@ -36,6 +40,7 @@ const Spot = () => {
                 <span className='thead'>Text Overlay 2</span>
              
                 <br></br>
+                <br></br>
                 <span className='tbox' >Text Overlay 2</span>
                 
               </div>
@@ -47,6 +52,8 @@ const Spot = () => {
               <div className="overlay-content">
                 <span className='thead'>Text Overlay 2</span>
                 <br></br>
+                <br></br>
+               
                 
                 <span className='tbox'>Text Overlay 2</span>
               </div>
@@ -58,6 +65,8 @@ const Spot = () => {
               <div className="overlay-content">
                 <span className='thead'> Text Overlay 2</span>
                 <br></br>
+                <br></br>
+               
                 
                 <span className='tbox' >Text Overlay 2</span>
               </div>

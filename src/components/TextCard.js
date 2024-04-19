@@ -11,7 +11,7 @@ const ThreeCardsRow = () => {
       
       <Row className="mt-5 mb-5">
         <Col md={4} sm={12} className="mb-3">
-          <Card>
+          <Card className="h-100">
             <FaChild  className="mx-auto mt-3 icon-yellow" size={100} />
             <Card.Body>
               <Card.Title className="text-center head">50,000+</Card.Title>
@@ -23,7 +23,7 @@ const ThreeCardsRow = () => {
           </Card>
         </Col>
         <Col md={4} sm={12} className="mb-3">
-          <Card>
+          <Card className="h-100">
             <MdAddLocationAlt className="mx-auto mt-3 icon-yellow" size={100} />
             <Card.Body>
               <Card.Title className="text-center head">Handcrafted</Card.Title>
@@ -35,7 +35,7 @@ const ThreeCardsRow = () => {
           </Card>
         </Col>
         <Col md={4} sm={12} className="mb-3">
-          <Card>
+          <Card className="h-100">
             <FaGlobeAmericas className="mx-auto mt-3 icon-yellow" size={100} />
             <Card.Body>
               <Card.Title className="text-center head">Extremely Happy</Card.Title>

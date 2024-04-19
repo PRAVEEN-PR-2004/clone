@@ -14,12 +14,13 @@ const Address = () => {
             
             <FaPhoneAlt className="mb-2" size={30} />
             <h4 className="h4map">+91 9940882200</h4>
-            <hr />
+           
             <IoMail className="mb-2" size={30} />
             <h4 className="h4map">mail@gtholidays.in</h4>
           </Col>
+         
           <Col lg={6} md={6} sm={12} className="secondcol">
-            <h3>Book Your Dream Vacay Today!</h3>
+            <h2>Book Your Dream Vacation Today!</h2>
 
             <Form className="secondcolform mt-5">
               <Form.Group className="mb-4 gtform" controlId="formName">

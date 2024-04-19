@@ -7,6 +7,7 @@ import Topbar from '../components/Topbar'
 import Spot from '../components/Spot'
 import Content from '../components/Content'
 import Address from '../components/Address'
+import Familytour from '../components/Familytour'
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
        <TextCard/>
       <ImgBanner/>
       <Content/>
+      <Familytour/>
       <Address/>
 
       

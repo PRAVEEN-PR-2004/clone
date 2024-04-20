@@ -8,7 +8,7 @@ import logog from "../assets/GT-Holidays-Logo.jpg";
 import { useEffect, useState } from "react";
 import './Appbar.css'
 
-function OffcanvasExample() {
+function Appbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -57,105 +57,41 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">HOME</Nav.Link>
+                  <Nav.Link href="/">HOME</Nav.Link>
+                  <Nav.Link href="/company">COMPANY</Nav.Link>
+                  <Nav.Link href="/grouptour">GROUP TOUR</Nav.Link>
+                  <Nav.Link href="/packages">PACKAGES</Nav.Link>
+                  <Nav.Link href="/honeymoon">HONEYMOON</Nav.Link>
+                  <Nav.Link href="/cruises">CRUISES</Nav.Link>
+                  <Nav.Link href="/wedding">WEDDING</Nav.Link>
                   <NavDropdown
                     title="COMPANY"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="/company">Mumbai</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="#action2">GROUP TOUR</Nav.Link>
-                  <NavDropdown
-                    title="PACKAGES"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="HONEYMOON"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="#action2">CRUISES</Nav.Link>
-                  <NavDropdown
-                    title="WEDDING"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="COMPANY"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action3">Mumbai</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="/company">
                       Hyderabad
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="/company">
                       Bangalore
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action4">Chennai</NavDropdown.Item>
+                    <NavDropdown.Item href="/company">Chennai</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="/company">
                       Coimbatore
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
 
-                    <NavDropdown.Item href="#action4">Erode</NavDropdown.Item>
+                    <NavDropdown.Item href="/company">Erode</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action3">Madurai</NavDropdown.Item>
+                    <NavDropdown.Item href="/company">Madurai</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action4">Trichy</NavDropdown.Item>
+                    <NavDropdown.Item href="/company">Trichy</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">Salem</NavDropdown.Item>
+                    <NavDropdown.Item href="/company">Salem</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                   <Navbar.Text className="justify-content-end">
@@ -171,4 +107,4 @@ function OffcanvasExample() {
   );
 }
 
-export default OffcanvasExample;
+export default Appbar;

@@ -29,7 +29,7 @@ const Spot = () => {
                 <br></br>
                 
            
-                <span className='tbox' >Text Overlay 2</span>
+                <span className='tbox'  >Text Overlay 2</span>
               </div>
             </div>
           </Col>

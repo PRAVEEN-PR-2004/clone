@@ -1,0 +1,13 @@
+.image-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .package-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .package-image:hover {
+    transform: scale(1.1);
+  }
+  

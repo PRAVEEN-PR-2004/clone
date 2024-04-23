@@ -7,19 +7,21 @@ import cruises4 from "../assets/cruises4.jpg";
 import cruises5 from "../assets/cruises5.jpg";
 import cruises6 from "../assets/cruises6.jpg";
 import cruises7 from "../assets/cruises7.jpg";
-
+import Nav from 'react-bootstrap/Nav';
+import Linkcom from "../components/Linkcom";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Cruises = () => {
   return (
     <>
-      <div style={{ marginBottom: "4%" }}>
+      <div style={{ marginBottom: "1%" }}>
         <img
           src={cruise}
           alt="Holidays Banner"
           style={{ width: "100%", height: "auto" }}
         />
       </div>
+     <Linkcom children={"Cordelia Cruises"}/>
       <Container>
         <Row className="mb-3">
           <Col md={8}>
@@ -97,19 +99,19 @@ const Cruises = () => {
         <Col md={6}>
           <p style={{fontSize:"30px"}}>Everything You want to know about the Empress Of The Seas</p>
           <p style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Here are the minute details you need to know about the cruise before boarding it. Please go through every section given below.</p>
-          <h3>Technical Details of the Ship</h3>
+          <p style={{fontSize:"20px"}}>Technical Details of the Ship</p>
           <ul>
-            <li>Type: Empress-class cruise ship</li>
-            <li>Capacity: 1,840</li>
-            <li>Crew: 668</li>
-            <li>Cabins: 796 Cabins</li>
-            <li>Speed: 19.5 knots (36.1 km/h; 22.4 mph)</li>
-            <li>Draught: 7.10 m (23.29 ft)</li>
-            <li>Decks: 11 Passenger Decks</li>
-            <li>Installed power: 2 × Wärtsilä-Duvant Crespelle diesel combined 16,200 kW</li>
-            <li>Tonnage: 48,563 GT / 5,344 DWT</li>
-            <li>Length: 210.81 m (691.63 ft)</li>
-            <li>Beam: 30.70 m (100.72 ft)</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Type: Empress-class cruise ship</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Capacity: 1,840</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Crew: 668</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Cabins: 796 Cabins</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Speed: 19.5 knots (36.1 km/h; 22.4 mph)</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Draught: 7.10 m (23.29 ft)</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Decks: 11 Passenger Decks</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Installed power: 2 × Wärtsilä-Duvant Crespelle diesel combined 16,200 kW</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Tonnage: 48,563 GT / 5,344 DWT</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Length: 210.81 m (691.63 ft)</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Beam: 30.70 m (100.72 ft)</li>
           </ul>
 
         </Col>
@@ -143,28 +145,28 @@ const Cruises = () => {
           <p style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>We knew that you would have this question. Here is the solution for why Cordelia Cruise’s Empress of the Seas is the best among another huge cruise: –</p>
           <ul>
 
-            <li>Excellent Food – 3 Special Restaurants</li>
-            <li>Indian & International cuisines</li>
-            <li>5 Bars and various party zones</li>
-            <li>Fitness Centre</li>
-            <li>Spa & Salon</li>
-            <li>Casino in international waters</li>
-            <li>Live Bands and DJ Parties</li>
-            <li>Adventure activities</li>
-            <li>Theatre</li>
-            <li>Swimming Pool</li>
-            <li>Nightclub and Lounges</li>
-            <li>Luxury cruise experience</li>
-            <li>Non-stop Entertainment</li>
-            <li>Shopping</li>
-            <li>Discos and Party Places</li>
-            <li>Broadway-themed halls with world-class musicians, comedians, and dancers</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Excellent Food – 3 Special Restaurants</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Indian & International cuisines</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>5 Bars and various party zones</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Fitness Centre</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Spa & Salon</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Casino in international waters</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Live Bands and DJ Parties</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Adventure activities</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Theatre</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Swimming Pool</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Nightclub and Lounges</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Luxury cruise experience</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Non-stop Entertainment</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Shopping</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Discos and Party Places</li>
+            <li style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Broadway-themed halls with world-class musicians, comedians, and dancers</li>
           </ul>
           </Col>
           <Col>
           <img src={cruises6} alt="c" style={{ width: "100%" }} />
 
-          <p className="mt-3">Among all these accommodations and facilities, there are some extra services you can use. However, these additional services are categorized into two basic types, viz., inclusive services, and exclusive services. Exclusive services are based on your expenses. Have a glance at both:</p>
+          <p className="mt-3" style={{color:" rgb(127, 126, 126)",fontSize:"smaller"}}>Among all these accommodations and facilities, there are some extra services you can use. However, these additional services are categorized into two basic types, viz., inclusive services, and exclusive services. Exclusive services are based on your expenses. Have a glance at both:</p>
           </Col>
         </Row>
         <Row className="mb-3">

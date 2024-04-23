@@ -7,7 +7,7 @@ import cruises4 from "../assets/cruises4.jpg";
 import cruises5 from "../assets/cruises5.jpg";
 import cruises6 from "../assets/cruises6.jpg";
 import cruises7 from "../assets/cruises7.jpg";
-import Nav from 'react-bootstrap/Nav';
+
 import Linkcom from "../components/Linkcom";
 import { Col, Container, Row } from "react-bootstrap";
 

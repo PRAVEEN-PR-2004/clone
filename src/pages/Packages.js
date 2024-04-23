@@ -1,8 +1,9 @@
 import React from 'react'
+import TourPackages from '../components/TourPackages'
 
 const Packages = () => {
   return (
-    <div>Packages</div>
+    <TourPackages/>
   )
 }
 

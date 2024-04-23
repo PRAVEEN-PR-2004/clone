@@ -8,7 +8,7 @@ import Spot from '../components/Spot'
 import Content from '../components/Content'
 import Address from '../components/Address'
 import Familytour from '../components/Familytour'
-import Thankyou from '../components/Thankyou'
+
 
 
 const Home = () => {

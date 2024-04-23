@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import Thankyou from './Thankyou';
+
 
 const Linkcom = ({ children }) => {
   return (
@@ -19,7 +19,7 @@ const Linkcom = ({ children }) => {
         </Nav>
       </Container>
       <hr style={{color:" rgb(127, 126, 126)"}}></hr>
-      <Thankyou/>
+     
      
     </>
   );

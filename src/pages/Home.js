@@ -23,7 +23,7 @@ const Home = () => {
       <Content/>
       <Familytour/>
       <Address/>
-      <Thankyou/>
+     
 
       
 

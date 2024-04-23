@@ -13,7 +13,7 @@ import Thankyou from '../components/Thankyou'
 
 const Home = () => {
   return (
-    <div>
+    <>
      
 
         <Banner/>
@@ -28,7 +28,7 @@ const Home = () => {
       
 
        
-    </div>
+    </>
   )
 }
 

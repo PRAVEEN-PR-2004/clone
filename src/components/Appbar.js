@@ -1,11 +1,13 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './Appbar.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Offcanvas,
+} from "react-bootstrap";
+import "./Appbar.css";
 import logog from "../assets/GT-Holidays-Logo.jpg";
 
 function Appbar() {
@@ -28,9 +30,16 @@ function Appbar() {
   return (
     <>
       {["xxl"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="changenav mb-3 sticky-top">
+        <Navbar
+          key={expand}
+          expand={expand}
+          className="changenav mb-3 sticky-top"
+        >
           <Container fluid>
-            <Navbar.Brand href="#home" className="d-flex justify-content-center  ml-md-3">
+            <Navbar.Brand
+              href="#home"
+              className="d-flex justify-content-center  ml-md-3"
+            >
               <img
                 src={logog}
                 width={isSmallScreen ? "150" : "250"}
@@ -53,45 +62,111 @@ function Appbar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-3">
-                  {/* Apply Bootstrap's .nav-link class to each Link component */}
-                  <Link to="/" className="nav-link">HOME</Link>
-                  <Link to="/company" className="nav-link">COMPANY</Link>
-                  <Link to="/grouptour" className="nav-link">GROUP TOUR</Link>
-                  <Link to="/packages" className="nav-link">PACKAGES</Link>
-                  <Link to="/honeymoon" className="nav-link">HONEYMOON</Link>
-                  <Link to="/cruises" className="nav-link">CRUISES</Link>
-                  <Link to="/wedding" className="nav-link">WEDDING</Link>
-                  <NavDropdown title="COMPANY" id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Mumbai</NavDropdown.Item>
+                  <Link to="/" className="nav-link">
+                    HOME
+                  </Link>
+                  <Link to="/company" className="nav-link">
+                    COMPANY
+                  </Link>
+                  <Link to="/grouptour" className="nav-link">
+                    GROUP TOUR
+                  </Link>
+                  <Link to="/packages" className="nav-link">
+                    PACKAGES
+                  </Link>
+                  <Link to="/honeymoon" className="nav-link">
+                    HONEYMOON
+                  </Link>
+                  <Link to="/cruises" className="nav-link">
+                    CRUISES
+                  </Link>
+                  <Link to="/wedding" className="nav-link">
+                    WEDDING
+                  </Link>
+                  <NavDropdown
+                    title="CONTACT"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Mumbai"
+                      className="dropdown-item"
+                    >
+                      Mumbai
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Hyderabad</NavDropdown.Item>
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Hyderabad"
+                      className="dropdown-item"
+                    >
+                      Hyderabad
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Bangalore</NavDropdown.Item>
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Bangalore"
+                      className="dropdown-item"
+                    >
+                      Bangalore
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Chennai</NavDropdown.Item>
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Chennai"
+                      className="dropdown-item"
+                    >
+                      Chennai
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Coimbatore</NavDropdown.Item>
+
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Coimbatore"
+                      className="dropdown-item"
+                    >
+                      Coimbatore
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Erode</NavDropdown.Item>
+
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Erode"
+                      className="dropdown-item"
+                    >
+                      Erode
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Madurai</NavDropdown.Item>
+
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Madurai"
+                      className="dropdown-item"
+                    >
+                      Madurai
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Trichy</NavDropdown.Item>
+
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Trichy"
+                      className="dropdown-item"
+                    >
+                      Trichy
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    {/* Apply Bootstrap's .dropdown-item class to each NavDropdown.Item component */}
-                    <NavDropdown.Item as={Link} to="/company" className="dropdown-item">Salem</NavDropdown.Item>
+
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/contact/Salem"
+                      className="dropdown-item"
+                    >
+                      Salem
+                    </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Navbar.Text className="justify-content-end">
-                  <span className='noo'>+91 9195412160</span>
+                  <span className="noo">+91 9195412160</span>
                 </Navbar.Text>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

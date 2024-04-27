@@ -12,6 +12,7 @@ import Company from './pages/Company';
 
 import Appbar from './components/Appbar';
 import Topbar from './components/Topbar'
+import FullPackages from './components/FullPackages';
 
 function App() {
   return (
@@ -20,13 +21,14 @@ function App() {
     <Appbar/>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
-      <Route path='/contact' element={<Contact/>}></Route>
+      <Route path='/company' element={<Company/>}></Route>
       <Route path='/cruises' element={<Cruises/>}></Route>
       <Route path='/grouptour' element={<GroupTour/>}></Route>
       <Route path='/packages' element={<Packages/>}></Route>
       <Route path='/wedding' element={<Wedding/>}></Route>
       <Route path='/honeymoon' element={<HoneyMoon/>}></Route>
-      <Route path='/company' element={<Company/>}></Route>
+      <Route path='/contact/:city' element={<Contact/>}></Route>
+      <Route path='/fullpackage/:id' element={<FullPackages/>}></Route>
     </Routes>
    </>
   );

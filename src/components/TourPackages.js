@@ -49,7 +49,7 @@ const TourPackages = () => {
                   style={{
                     borderRadius: "0",
                     height: "50px",
-                    marginBottom: "5.5px",
+                    marginBottom: "5px",
                     fontSize: "small",
                     fontWeight: "500",
                   }}

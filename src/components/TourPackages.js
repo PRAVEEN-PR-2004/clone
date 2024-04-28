@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import pack from "../assets/packagesimg.jpg.png";
 import { Card, Row, Col, Container } from "react-bootstrap";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
+
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { FaLocationDot } from "react-icons/fa6";
@@ -33,16 +33,18 @@ const TourPackages = () => {
         />
       </div>
       <Container>
-        <Row className="text-center">
-        <Col md={12} className="text-center">
-              <Form>
+        <Row >
+          <Col md={12} className="text-center">
+           
+          <Form>
                 <input
                   type="text"
                   style={{ height: "50px", width: "60%" }}
-                  placeholder="Destination"
+                  placeholder="DESTINATION"
+                  onChange={handleSearchChange}
                 />
-
-                <Button
+           
+           <Button
                   variant="dark"
                   style={{
                     borderRadius: "0",
@@ -55,7 +57,8 @@ const TourPackages = () => {
                   SEARCH
                 </Button>
               </Form>
-            </Col>
+            
+          </Col>
         </Row>
         <p className="mt-2" style={{ fontSize: "larger" }}>
           {filteredPackages.length} tours found

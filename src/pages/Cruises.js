@@ -10,6 +10,7 @@ import cruises7 from "../assets/cruises7.jpg";
 
 import Linkcom from "../components/Linkcom";
 import { Col, Container, Row } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 const Cruises = () => {
   return (
@@ -182,6 +183,7 @@ const Cruises = () => {
           </Col>
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 };

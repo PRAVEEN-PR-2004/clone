@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import Linkcom from '../components/Linkcom';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Fade } from 'react-awesome-reveal';
+import Footer from '../components/Footer';
+import Address from '../components/Address'
 
 const Contact = () => {
   const { city } = useParams();
@@ -32,13 +34,15 @@ const Contact = () => {
           </Col>
         </Row>
         </Fade>
-        <Fade triggerOnce delay={1000} duration={2000} cascade>
+        <Fade triggerOnce delay={1000} duration={1000} cascade>
         <p style={{fontSize:"30px"}}>{contactcity.head1}</p>
         <p style={{fontSize:"15px",color:"gray"}}>{contactcity.para1}</p>
         <p style={{fontSize:"30px"}}>{contactcity.head2}</p>
         <p style={{fontSize:"15px",color:"gray"}}>{contactcity.para2}</p>
         </Fade>
       </Container>
+      <Address/>
+      <Footer/>
     </>
   );
 };

@@ -57,7 +57,7 @@ function Appbar() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                 GT HOLIDAYS
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

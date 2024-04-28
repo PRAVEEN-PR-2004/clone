@@ -8,6 +8,7 @@ import Spot from '../components/Spot'
 import Content from '../components/Content'
 import Address from '../components/Address'
 import Familytour from '../components/Familytour'
+import Footer from '../components/Footer'
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
       <Content/>
       <Familytour/>
       <Address/>
+      <Footer/>
      
 
       

@@ -33,31 +33,29 @@ const TourPackages = () => {
         />
       </div>
       <Container>
-        <Row className="align-items-center d-md-flex">
-          <Col xs={12} md={12} className="d-flex">
-            <span style={{ width: "calc(70% - 15px)" }}>
-              <FloatingLabel
-                controlId="floatingInput"
-                label="Destination"
-                className="mb-3"
-                style={{ borderRadius: "0" }}
-              >
-                <Form.Control
+        <Row className="text-center">
+        <Col md={12} className="text-center">
+              <Form>
+                <input
                   type="text"
-                  placeholder="name@example.com"
-                  onChange={handleSearchChange}
+                  style={{ height: "50px", width: "60%" }}
+                  placeholder="Destination"
                 />
-              </FloatingLabel>
-            </span>
-            <span style={{ width: "calc(30% - 15px)" }}>
-              <Button
-                variant="dark"
-                style={{ width: "100%", height: "58px", borderRadius: "0" }}
-              >
-                SEARCH
-              </Button>
-            </span>
-          </Col>
+
+                <Button
+                  variant="dark"
+                  style={{
+                    borderRadius: "0",
+                    height: "50px",
+                    marginBottom: "5.5px",
+                    fontSize: "small",
+                    fontWeight: "500",
+                  }}
+                >
+                  SEARCH
+                </Button>
+              </Form>
+            </Col>
         </Row>
         <p className="mt-2" style={{ fontSize: "larger" }}>
           {filteredPackages.length} tours found

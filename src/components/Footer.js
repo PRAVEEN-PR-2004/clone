@@ -41,7 +41,7 @@ const Footer = () => {
                     borderRadius: "0",
                     height: "50px",
                     marginBottom: "5.5px",
-                    fontSize: "medium",
+                    fontSize: "small",
                     fontWeight: "500",
                   }}
                 >

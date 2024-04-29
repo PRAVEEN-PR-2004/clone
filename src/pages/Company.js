@@ -96,7 +96,7 @@ const Company = () => {
             
             <Card.Body>
              
-              <Card.Title className="text-center head" style={{fontFamily:" sans-serif ",fontSize:"25px"}}style={{fontFamily:" sans-serif ",fontSize:"25px"}}>300K+</Card.Title>
+              <Card.Title className="text-center head" style={{fontFamily:" sans-serif ",fontSize:"25px"}}>300K+</Card.Title>
               <Card.Text className="text-center para">Destinations</Card.Text>
                 
             </Card.Body>

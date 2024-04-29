@@ -8,6 +8,11 @@ import himgi3 from '../assets/hindia3.png'
 import himgi4 from '../assets/himg4.png'
 import himgi5 from '../assets/himg5.png'
 import himgi6 from '../assets/himg6.png'
+import itour from '../assets/indiatour.png'
+import itour2 from '../assets/indiatour3.png'
+import int1 from '../assets/internation1.png'
+import int2 from '../assets/international2.png'
+
 import './Allhoneymoon.css';
 import Footer from './Footer'
 
@@ -49,6 +54,15 @@ const Allhoneymoon = () => {
 
             </Col>
         </Row>
+       <Row style={{marginBottom:"4%"}}>
+        <h3 style={{fontFamily:"Playfair Display"}}>India</h3>
+        <Col md={6}>
+          <img src={itour} alt='india' style={{width:"100%"}}></img>
+        </Col>
+        <Col md={6}>
+        <img src={itour2} alt='india' style={{width:"99%"}}></img>
+        </Col>
+       </Row>
         <h2 style={{fontFamily:"Playfair Display",color:"#3A3A3A"}}>Choosing the Best Honeymoon Packages in India</h2>
         <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>India has several eclectic destinations to choose from for your honeymoon. There are the majestic Himalayas, the southern region with the greenery and houseboats, the eastern and northern regions with the mountains among other features, and also the magnificent deserts in the western areas. Some of the honeymoon trip packages in India we offer include the Himachal region, Andaman Islands, Goa, Munnar, Shimla, Ladakh, Kashmir, Jaipur, and Kerala.</p>
         <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>If a honeymoon trip in India is what you are looking for, GT Holidays has the best options for you. The luxury honeymoon packages in India offered by us include a Lovers Paradise package to Kerala and a Heaven on Earth package covering Srinagar, Gulmarg, and Pahalgam. The Romantic Himachal package provided by GT holidays includes Manali, Rohtang Pass, and Kullu, and the Romantic Jaipur Delight covers Jaipur, Udaipur, and Mount Abu.</p>
@@ -80,6 +94,15 @@ const Allhoneymoon = () => {
             </Col>
             </Row>
             <br></br>
+            <Row style={{marginBottom:"4%"}}>
+        <h3 style={{fontFamily:"Playfair Display"}}>International</h3>
+        <Col md={6}>
+          <img src={int1} alt='india' style={{width:"100%"}}></img>
+        </Col>
+        <Col md={6}>
+        <img src={int2} alt='india' style={{width:"99%"}}></img>
+        </Col>
+       </Row>
             <h2 style={{fontFamily:"Playfair Display",color:"#3A3A3A"}}>International Honeymoon Tour Packages at GT Holidays</h2>
         <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>Our international holiday packages include foreign honeymoon packages to Australia, Borocay, New Zealand, Mauritius, Greece, Italy, Singapore, Bora Bora, Hong Kong, Macau, Seychelles, Phuket, Kuala Lumpur, Maldives, and Sri Lanka.</p>
         <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>The Treasure of Europe package from our honeymoon packages abroad will take you to London and Paris. Once you arrive at the London Heathrow Airport, you will be greeted by our tour representatives who will then transfer you to the hotel, and you can spend the whole day relaxing. On your second day, you can go sightseeing and visit Westminster Abbey and Buckingham Palace. You will take the Eurostar train to Paris on the third day and visit some of Paris’ best sites on our bus tour on the fourth and fifth days, including the Eiffel Tower, the Louvre Museum, Cathédrale Notre-Dame de Paris, Arc de Triomphe, and visit some of the famous Parisian cafes. On your last day, you can take a flight back home from Paris airport.</p>

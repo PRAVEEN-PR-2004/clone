@@ -45,13 +45,14 @@ const TourPackages = () => {
                 />
            
            <Button
-                  variant="dark"
-                  style={{
-                    borderRadius: "0",
-                    height: "50px",
-                    marginBottom: "4px",
-                    fontSize: "small",
-                    fontWeight: "500",
+                 variant="dark"
+                 style={{
+                     borderRadius: "0",
+                     height: "50px",
+                     marginBottom: "4px",
+                     fontSize: "small",
+                     fontWeight: "500",
+                     border: "none" // or border: "0"
                   }}
                 >
                   SEARCH

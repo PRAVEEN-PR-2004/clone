@@ -7,7 +7,7 @@ const Familytour = () => {
    <>
    <Container className='mt-3'>
     <p style={{fontSize:'25px'}}>GT Group Departures</p>
-   <div > {/* Add margin to the outer div */}
+   <div > 
       <img src={family} alt="Holidays Banner" style={{ width: '100%', height: 'auto' }} />
     </div>
    </Container>

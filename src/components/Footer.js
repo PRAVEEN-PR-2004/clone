@@ -7,9 +7,11 @@ import { FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 
+
 const Footer = () => {
   return (
     <>
+   
       <div
         style={{
           backgroundColor: "#EEEEEE",

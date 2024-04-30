@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react';
 import Linkcom from "../components/Linkcom";
 import companyimg from '../assets/companyimg.png'
 import companyimg1 from '../assets/companyimg2.jpg'
@@ -8,6 +8,9 @@ import owner from '../assets/owner.jpg'
 import { Col,Row, Container,Card } from 'react-bootstrap';
 import Footer from '../components/Footer';
 const Company = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <>
     <div style={{ marginBottom: "1%" }}>

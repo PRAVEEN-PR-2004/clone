@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from 'react';
 import cruise from "../assets/cruise.png";
 import cruises1 from "../assets/cruises1.jpg";
 import cruises2 from "../assets/cruises2.jpg";
@@ -13,6 +13,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/Footer";
 
 const Cruises = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <>
       <div style={{ marginBottom: "1%" }}>

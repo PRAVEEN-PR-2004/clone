@@ -5,7 +5,8 @@ import './Bookform.css'; // Import the CSS file for custom styles
 const Bookform = () => {
   return (
     <>
-      <Form className="secondcolform mt-5 text-center with-shadow"> {/* Add the "with-shadow" class */}
+    
+      <Form className="secondcolform mt-5 text-center with-shadow"  > {/* Add the "with-shadow" class */}
         <br />
         <p style={{width:"80%",fontSize:"14px",fontWeight:"700",color:"#808080"}}>Get the Guaranteed Best Vacation Deals from GT Holidays</p>
         <Form.Group className="mb-4 gtform" controlId="formName">
@@ -43,6 +44,7 @@ const Bookform = () => {
         </Button>
         <br />
       </Form>
+     
     </>
   );
 };

@@ -8,6 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { CiClock2 } from "react-icons/ci";
 import { ALLPACKAGES } from "./Allpackages";
 import './TourPackages.css'
+import { Link } from 'react-router-dom';
 
 const TourPackages = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -75,6 +76,7 @@ const TourPackages = () => {
               className="mb-5"
             >
               <Card className="mb-3 h-100">
+              <Link to={`/fullpackage/${tourPackage.id}`} children={tourPackage}>
                 <div className="image-container">
                   <Card.Img
                     variant="top"
@@ -82,6 +84,7 @@ const TourPackages = () => {
                     className="package-image"
                   />
                 </div>
+                </Link>
                 <Card.Body>
                   <Card.Text style={{ fontSize: "10px", color: "#888" }}>
                     <FaLocationDot /> {tourPackage.location}

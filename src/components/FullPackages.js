@@ -1,42 +1,223 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import { PACKAGES } from './Gtpackages';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import React,{useEffect} from "react";
+import { useParams } from "react-router-dom";
+import { ALLPACKAGES } from "./Allpackages";
+import { Col,Card, Container, Row } from "react-bootstrap";
+import Linkcom from "./Linkcom";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoFootstepsOutline } from "react-icons/io5";
+import { RiSpeakLine } from "react-icons/ri";
+import { GrGroup } from "react-icons/gr";
+import { LuClock } from "react-icons/lu";
+import Bookform from "./Bookform";
+import { FaGlobeAmericas } from "react-icons/fa";
+
 
 const FullPackages = () => {
-  const  {id}  = useParams();
-  const reqdeltail = PACKAGES.find(pack => pack.id === parseInt(id));
+  const { id } = useParams();
+  const reqdeltail = ALLPACKAGES.find((pack) => pack.id === parseInt(id));
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
-  <Container>
-    <Row>
-      <Col md={8}>
-      <div style={{ display: "flex", alignItems: "center" }}>
-            <p style={{ marginRight: "10px" }}>{reqdeltail.day}</p>
-            <p>{reqdeltail.location}</p>
-      </div>
-      <h1>{reqdeltail.name}</h1>
-      <img src={reqdeltail.Pimage} alt='kk' style={{width:"100%",height:"50%"}} />
+    <>
+      <Linkcom children={"GroupTour"} />
+      <Container style={{ marginTop: "5%" }}>
+        <Row >
+          <Col md={8} style={{height:"100%"}} >
+            <h3 style={{ fontFamily: "popins" }}>{reqdeltail.name}</h3>
+            <p style={{ fontSize: "14px", ccolor: " #5E6D77" }}>
+              <FaLocationDot style={{ color: " #5E6D77" }} />{" "}
+              {reqdeltail.location}
+            </p>
+            <hr></hr>
+            <Row >
+              <Col lg={12}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    flexWrap: "wrap",
+                   
+                    
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginBottom:"3%"
+                     
+                    }}
+                  >
+                    <div style={{ marginRight: "10px" }}>
+                      <LuClock size={40} style={{ color: "#5191fa" }} />
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "15px",
+                          fontFamily: "Playfair Display, serif",
+                        }}
+                      >
+                        Duration
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          color: "#efa41b",
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        {reqdeltail.day}
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginBottom:"3%"
+                    }}
+                  >
+                    <div style={{ marginRight: "10px" }}>
+                      <IoFootstepsOutline
+                        size={40}
+                        style={{ color: "#5191fa" }}
+                      />
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "15px",
+                          fontFamily: "Playfair Display, serif",
+                        }}
+                      >
+                        Tour Tpye
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          color: "#efa41b",
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        Group Tour
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginBottom:"3%"
+                    }}
+                  >
+                    <div style={{ marginRight: "10px" }}>
+                      <RiSpeakLine size={40} style={{ color: "#5191fa" }} />
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "15px",
+                          fontFamily: "Playfair Display, serif",
+                        }}
+                      >
+                       Grop Size
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          color: "#efa41b",
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        unlimited
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginBottom:"3%"
+                    }}
+                  >
+                    <div style={{ marginRight: "10px" }}>
+                      <GrGroup size={40} style={{ color: "#5191fa" }} />
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "15px",
+                          fontFamily: "Playfair Display, serif",
+                        }}
+                      >
+                        Language
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          color: "#efa41b",
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        English
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <img src={reqdeltail.Pimage} alt="gt" style={{width:"100%",height:"50%",marginTop:"1%"}}/>
+          </Col>
+          <Col md={4} className="text-center" >
+            <Bookform/>
+            <br></br>
+            <br></br>
+            
+            <Card style={{marginTop:"5%"}}>
+            <FaGlobeAmericas className="mx-auto mt-3 icon-yellow" size={100} />
+            <Card.Body>
+              <Card.Title className="text-center head">Extremely Happy</Card.Title>
+              <Card.Title className="text-center head">Travellers</Card.Title>
+              <Card.Text className="text-center para">
+                GT Holidays hold a record of great customer satisfaction, and all customers are retained with us.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+            
+            
 
-      </Col>
-      <Col md={4}>
-       <span><p>SUPER DEAL PRICE</p><Button>jjj</Button></span> 
-      </Col>
-    </Row>
-  </Container>
-  )
-}
+          </Col>
+        </Row>
+        <hr></hr>
 
-export default FullPackages
+        <h3 className="text-center" style={{marginTop:"4%"}}>You might also like</h3>
+      </Container>
 
+    </>
+  );
+};
 
-
-
-
-
-
-
-
-
-
-
-
+export default FullPackages;

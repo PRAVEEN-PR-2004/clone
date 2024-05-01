@@ -12,6 +12,14 @@ import gt11 from '../assets/gt11.jpg'
 import gt12 from '../assets/gt12.jpg'
 import gt13 from '../assets/gt13.jpg'
 import gt14 from '../assets/gt14.jpg'
+import gt15 from '../assets/gt15.jpg'
+import gt16 from '../assets/gt16.jpg'
+import gt17 from '../assets/gt17.jpg'
+import gt18 from '../assets/gt18.jpg'
+import gt19 from '../assets/gt19.jpg'
+import gt20 from '../assets/gt20.jpg'
+import gt21 from '../assets/gt21.jpg'
+import gt22 from '../assets/gt22.jpg'
 
 
 export const ALLPACKAGES =
@@ -121,5 +129,69 @@ export const ALLPACKAGES =
         day: " 3 Nights/ 4 Days",
         Pimage:gt14,
     },
+    {
+        id:15 ,
+        location:" Rovaniemi, Santa Claus Village",
+        name:"The Northern Lights Search Rovaniemi ",
+        day:"4 Nights 5 Days ",
+        Pimage:gt15 ,
+
+    },
+    {
+        id: 16,
+        location:"Athens",
+        name:"Athens Free And Easy",
+        day:"3 Nights 4 Days",
+        Pimage: gt16,
+
+    },
+    {
+        id:17 ,
+        location:"Athens, Argolis, Olympia, Delphi, Kalambaka ",
+        name:"Exotic Greece ",
+        day:"6 Nights 7 Days",
+        Pimage: gt17,
+
+    },
+    {
+        id: 18,
+        location:" Athens, Kalambaka",
+        name:"Glamour of Greece ",
+        day:"6 Nights 7 Days ",
+        Pimage:gt18 ,
+
+    },
+    {
+        id:19 ,
+        location:"6 Nights 7 Days ",
+        name:"Scandinavia Bonanza ",
+        day:"5 Nights 6 Days ",
+        Pimage:gt19 ,
+
+    },
+    {
+        id:20 ,
+        location:"Granada, Spain ",
+        name:"Spanish Delight ",
+        day:"6 Nights 7 Days",
+        Pimage:gt20 ,
+
+    },
+    {
+        id: 21,
+        location:"Nuuk, Kangeq, Ilulissat ",
+        name:"Best Of Greenland ",
+        day:"6 Nights 7 Days ",
+        Pimage:gt21 ,
+
+    },
+    {
+        id:22 ,
+        location:"6 Nights 7 Days ",
+        name:"Captivating Japan | 6 Days Itinerary ",
+        day:"5 Nights 6 Days ",
+        Pimage: gt22,
+
+    }
  
 ]

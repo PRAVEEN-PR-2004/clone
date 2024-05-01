@@ -13,6 +13,7 @@ import Company from './pages/Company';
 import Appbar from './components/Appbar';
 import Topbar from './components/Topbar'
 import FullPackages from './components/FullPackages';
+import ShowGtours from './components/ShowGtours';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path='/honeymoon' element={<HoneyMoon/>}></Route>
       <Route path='/contact/:city' element={<Contact/>}></Route>
       <Route path='/fullpackage/:id' element={<FullPackages/>}></Route>
+      <Route path='/showgrouptour/:id' element={<ShowGtours/>}></Route>
     </Routes>
    </>
   );

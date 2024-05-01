@@ -19,7 +19,7 @@ const TourGroup = () => {
         {PACKAGES.map((packages) => (
           <Col key={packages.id} xs={12} sm={6} md={4} lg={3} className='mb-5'>
             <Card className="mb-3 h-100">
-            <Link to={`/fullpackage/${packages.id}`} children={packages}>
+            <Link to={`/showgrouptour/${packages.id}`} children={packages}>
 
             <div className="image-container">
           <Card.Img variant="top" src={packages.Pimage} className="package-image" />

@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { ALLPACKAGES } from "./Allpackages";
+import { PACKAGES } from "./Gtpackages";
 import { Col, Container, Row } from "react-bootstrap";
 import Linkcom from "./Linkcom";
 import { FaLocationDot } from "react-icons/fa6";
@@ -11,15 +11,15 @@ import { LuClock } from "react-icons/lu";
 import Bookform from "./Bookform";
 
 
-const FullPackages = () => {
+const ShowGtours = () => {
   const { id } = useParams();
-  const reqdeltail = ALLPACKAGES.find((pack) => pack.id === parseInt(id));
+  const reqdeltail = PACKAGES.find((pack) => pack.id === parseInt(id));
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
   return (
     <>
-      <Linkcom children={"Packages"} />
+      <Linkcom children={"GroupTour"} />
       <Container style={{ marginTop: "5%" }}>
         <Row >
           <Col md={8} style={{height:"100%"}} >
@@ -207,4 +207,4 @@ const FullPackages = () => {
   );
 };
 
-export default FullPackages;
+export default ShowGtours;

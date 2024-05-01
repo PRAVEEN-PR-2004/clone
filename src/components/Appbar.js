@@ -12,7 +12,7 @@ import logog from "../assets/GT-Holidays-Logo.jpg";
 
 function Appbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -24,7 +24,9 @@ function Appbar() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  const closeOffcanvas = () => {
+    setShowOffcanvas(false);
+  };
   const isSmallScreen = windowWidth <= 768;
 
   return (
@@ -49,8 +51,10 @@ function Appbar() {
               />
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  onClick={() => setShowOffcanvas(!showOffcanvas)}/>
             <Navbar.Offcanvas
+            show={showOffcanvas}
+            onHide={() => setShowOffcanvas(false)}
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
@@ -62,25 +66,25 @@ function Appbar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-3">
-                  <Link to="/" className="nav-link">
+                  <Link to="/" className="nav-link"  onClick={closeOffcanvas}>
                     HOME
                   </Link>
-                  <Link to="/company" className="nav-link">
+                  <Link to="/company" className="nav-link"  onClick={closeOffcanvas}>
                     COMPANY
                   </Link>
-                  <Link to="/grouptour" className="nav-link">
+                  <Link to="/grouptour" className="nav-link"  onClick={closeOffcanvas}>
                     GROUP TOUR
                   </Link>
-                  <Link to="/packages" className="nav-link">
+                  <Link to="/packages" className="nav-link"  onClick={closeOffcanvas}>
                     PACKAGES
                   </Link>
-                  <Link to="/honeymoon" className="nav-link">
+                  <Link to="/honeymoon" className="nav-link"  onClick={closeOffcanvas}>
                     HONEYMOON
                   </Link>
-                  <Link to="/cruises" className="nav-link">
+                  <Link to="/cruises" className="nav-link"  onClick={closeOffcanvas}>
                     CRUISES
                   </Link>
-                  <Link to="/wedding" className="nav-link">
+                  <Link to="/wedding" className="nav-link"  onClick={closeOffcanvas}>
                     WEDDING
                   </Link>
                   <NavDropdown
@@ -91,6 +95,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Mumbai"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Mumbai
                     </NavDropdown.Item>
@@ -99,6 +104,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Hyderabad"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Hyderabad
                     </NavDropdown.Item>
@@ -107,6 +113,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Bangalore"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Bangalore
                     </NavDropdown.Item>
@@ -115,6 +122,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Chennai"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Chennai
                     </NavDropdown.Item>
@@ -124,6 +132,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Coimbatore"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Coimbatore
                     </NavDropdown.Item>
@@ -133,6 +142,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Erode"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Erode
                     </NavDropdown.Item>
@@ -142,6 +152,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Madurai"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Madurai
                     </NavDropdown.Item>
@@ -151,6 +162,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Trichy"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Trichy
                     </NavDropdown.Item>
@@ -160,6 +172,7 @@ function Appbar() {
                       as={Link}
                       to="/contact/Salem"
                       className="dropdown-item"
+                      onClick={closeOffcanvas}
                     >
                       Salem
                     </NavDropdown.Item>

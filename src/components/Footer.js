@@ -6,6 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -147,49 +148,74 @@ const Footer = () => {
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Mumbai' style={{textDecoration:"none",color:"inherit"}}>
+                  
+                 Mumbai
+                 </Link>
+                </li>
+                <li
+                  style={{ fontSize: "12px", color: "#BDBDBD" }}
+                  className="mb-0"
+                >
+                  <Link to='/contact/Hyderabad' style={{textDecoration:"none",color:"inherit"}}>
                   Hyderabad
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Bangalore' style={{textDecoration:"none",color:"inherit"}}>
                   Bangalore
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Chennai' style={{textDecoration:"none",color:"inherit"}}>
                   Chennai
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Coimbatore' style={{textDecoration:"none",color:"inherit"}}>
                   Coimbatore
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Erode' style={{textDecoration:"none",color:"inherit"}}>
                   Erode
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Madurai' style={{textDecoration:"none",color:"inherit"}}>
                   Madurai
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Trichy' style={{textDecoration:"none",color:"inherit"}}>
                   Trichy
+                  </Link>
                 </li>
                 <li
                   style={{ fontSize: "12px", color: "#BDBDBD" }}
                   className="mb-0"
                 >
+                  <Link to='/contact/Salem' style={{textDecoration:"none",color:"inherit"}}>
                   Salem
+                  </Link>
                 </li>
               </ul>
             </Col>

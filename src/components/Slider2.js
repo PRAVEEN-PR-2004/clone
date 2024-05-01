@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import s1 from '../assets/2s1.jpg'
@@ -9,6 +9,7 @@ import s4 from '../assets/2s4.jpg'
 import s5 from '../assets/2s5.jpg'
 import s6 from '../assets/2s6.jpg'
 import s7 from '../assets/2s7.jpg'
+import { Link } from "react-router-dom";
 
 const Slider2 = () => {
   const responsive = {
@@ -70,6 +71,24 @@ const Slider2 = () => {
           </Card>
         </div>
       </Carousel>
+      <Link to='/packages'>
+      <div className="text-center mt-3">
+        <Button
+          style={{
+            backgroundColor: "#ffcc00",
+            border: "none",
+            borderRadius: "0px",
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            color: "black",
+            fontSize: "17px",
+            fontWeight: "700"
+          }}
+        >
+          Know More
+        </Button>
+      </div>
+    </Link>
     </Container>
   );
 };

@@ -25,8 +25,9 @@ const Bookform = () => {
           <Form.Control className="formcontrol" type="text" placeholder="Destination" />
         </Form.Group>
         <Form.Group className="mb-4 gtform" controlId="formDate">
-          <Form.Control className="formcontrol" type="date" placeholder="Date of Travel" />
-        </Form.Group>
+  <Form.Control className="formcontrol" type="date" placeholder="dd-mm-yyyy" />
+</Form.Group>
+
         <Form.Group className="mb-4 gtform" controlId="formPeople">
           <Form.Control className="formcontrol" type="number" placeholder="No. of people" />
         </Form.Group>

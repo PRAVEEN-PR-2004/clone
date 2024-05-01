@@ -13,6 +13,9 @@ import './Allhoneymoon.css'
 import { Col, Container, Row } from 'react-bootstrap';
 
 import Bookform from './Bookform'
+import Slider3 from './Slider4'
+import Slider5 from './Slider5'
+import Footer from './Footer'
 
 const Allwedding = () => {
   return (
@@ -68,6 +71,12 @@ const Allwedding = () => {
        <Row>
         <Col md={8}>
         <h2 style={{fontFamily:"Playfair Display",color:"#3A3A3A"}}>
+        India
+        </h2>
+        <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>You can choose from a wide range of locations to organize your wedding, with destinations ranging from Goa, Udaipur, Kerala, Jaipur, and Shimla. At GT Holidays, we put together tailor-made destination wedding packages in India and across the world. But remember, your location choice and number of guests have a significant impact on the overall cost of the wedding.</p>
+        <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>With gorgeous landscapes and stunning architectural wonders to pick from, our destination wedding packages in India offer the ideal synthesis of culture, tradition, and vibrancy. Trust us for one of a kind extravaganza that includes all the razzmatazz of a big fat Indian wedding! We promise a one-of-a-kind experience that you and the guests will remember forever.</p>
+        <Slider3 className="mb-5"/>
+        <h2 style={{fontFamily:"Playfair Display",color:"#3A3A3A",marginTop:"3%"}}>
         International
                 </h2>
                 <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>Selecting the ideal location for an international destination wedding is a challenging process. It has to tick all the right boxes. You need to pick a place that’s breathtakingly stunning and dreamlike yet enjoyable and affordable. At GT Holidays, we specialize in curating international destination wedding packages that match your style and budget.</p>
@@ -96,6 +105,8 @@ const Allwedding = () => {
                 </h2>
                 <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>From renaissance architecture to delectable cuisine, fine art, and fashion – there’s so much to love and admire in Italy. Venice, the Amalfi Coast, Tuscany, Siena, and every other city in Italy offer a unique experience and are ideal locations for a dream wedding. It’s also a dream wedding destination for couples – who wouldn’t love to say I do amidst the soaring mountains, beautiful valleys, and other picturesque landscapes?</p>
                 <p style={{color:"#808080",fontSize:"14px",fontFamily:"Poppins, sans-serif !important;"}}>Contact us to find the best international destination wedding package deals. Follow our Instagram profile to know about the latest offers and discounts.</p>
+
+                <Slider5/>
         </Col>
         <Col md={4}>
           <Bookform/>
@@ -103,6 +114,8 @@ const Allwedding = () => {
         
         </Row>
         </Container>
+        <br></br> <br></br>
+        <Footer/>
     </>
   )
 }

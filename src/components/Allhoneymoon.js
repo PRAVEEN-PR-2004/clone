@@ -15,6 +15,7 @@ import int2 from '../assets/international2.png'
 
 import './Allhoneymoon.css';
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 const Allhoneymoon = () => {
   return (
@@ -42,16 +43,19 @@ const Allhoneymoon = () => {
 
             </Col>
             <Col style={{position:"relative"}}> 
+            <Link to='/packages'>
               <img src={himgi2} className='hmoon' alt="helo" style={{width:"90%",height:"85%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             <Col style={{position:"relative"}}>
+              <Link to='/packages'>
               <img src={himgi1} className='hmoon'  alt="helo" style={{width:"90%",height:"85%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             <Col style={{position:"relative"}}>
+              <Link to='/packages'>
               <img src={himgi3} className='hmoon'  alt="helo" style={{width:"90%",height:"85%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
         </Row>
        <Row style={{marginBottom:"4%"}}>
@@ -81,16 +85,19 @@ const Allhoneymoon = () => {
 
             </Col>
             <Col style={{position:"relative"}}> 
+            <Link>
               <img src={himgi4} className='hmoon' alt="helo" style={{width:"90%",height:"90%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             <Col style={{position:"relative"}}>
+            <Link>
               <img src={himgi5} className='hmoon'  alt="helo" style={{width:"90%",height:"90%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             <Col style={{position:"relative"}}>
+            <Link>
               <img src={himgi6} className='hmoon'  alt="helo" style={{width:"90%",height:"90%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             </Row>
             <br></br>

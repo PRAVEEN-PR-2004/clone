@@ -16,6 +16,7 @@ import Bookform from './Bookform'
 import Slider3 from './Slider4'
 import Slider5 from './Slider5'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 const Allwedding = () => {
   return (
@@ -42,16 +43,20 @@ const Allwedding = () => {
 
             </Col>
             <Col style={{position:"relative"}}> 
+            <Link to='/packages'>
               <img src={w1} className='hmoon' alt="helo" style={{width:"90%",height:"85%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             <Col style={{position:"relative"}}>
+              <Link to='/packages'>
               <img src={w2} className='hmoon'  alt="helo" style={{width:"90%",height:"85%",borderRadius:"10px"}} />
+              </Link>
 
             </Col>
             <Col style={{position:"relative"}}>
+              <Link to='/packages'>
               <img src={w3} className='hmoon'  alt="helo" style={{width:"90%",height:"85%",borderRadius:"10px"}} />
-
+              </Link>
             </Col>
             <h2 style={{fontFamily:"Playfair Display",color:"#3A3A3A"}}>
             Why Are Destination Wedding Packages Becoming Popular In India?

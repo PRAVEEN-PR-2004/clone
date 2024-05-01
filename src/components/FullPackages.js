@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ALLPACKAGES } from "./Allpackages";
 import { Col, Container, Row } from "react-bootstrap";
@@ -9,27 +9,28 @@ import { RiSpeakLine } from "react-icons/ri";
 import { GrGroup } from "react-icons/gr";
 import { LuClock } from "react-icons/lu";
 import Bookform from "./Bookform";
-
+import Random from "./Random";
+import Footer from "./Footer";
 
 const FullPackages = () => {
   const { id } = useParams();
   const reqdeltail = ALLPACKAGES.find((pack) => pack.id === parseInt(id));
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
   return (
     <>
       <Linkcom children={"Packages"} />
       <Container style={{ marginTop: "5%" }}>
-        <Row >
-          <Col md={8} style={{height:"100%"}} >
+        <Row>
+          <Col md={8} style={{ height: "100%" }}>
             <h3 style={{ fontFamily: "popins" }}>{reqdeltail.name}</h3>
             <p style={{ fontSize: "14px", ccolor: " #5E6D77" }}>
               <FaLocationDot style={{ color: " #5E6D77" }} />{" "}
               {reqdeltail.location}
             </p>
             <hr></hr>
-            <Row >
+            <Row>
               <Col lg={12}>
                 <div
                   style={{
@@ -37,8 +38,6 @@ const FullPackages = () => {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     flexWrap: "wrap",
-                   
-                    
                   }}
                 >
                   <div
@@ -46,8 +45,7 @@ const FullPackages = () => {
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
-                      marginBottom:"3%"
-                     
+                      marginBottom: "3%",
                     }}
                   >
                     <div style={{ marginRight: "10px" }}>
@@ -82,7 +80,7 @@ const FullPackages = () => {
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
-                      marginBottom:"3%"
+                      marginBottom: "3%",
                     }}
                   >
                     <div style={{ marginRight: "10px" }}>
@@ -120,7 +118,7 @@ const FullPackages = () => {
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
-                      marginBottom:"3%"
+                      marginBottom: "3%",
                     }}
                   >
                     <div style={{ marginRight: "10px" }}>
@@ -135,7 +133,7 @@ const FullPackages = () => {
                           fontFamily: "Playfair Display, serif",
                         }}
                       >
-                       Grop Size
+                        Grop Size
                       </p>
                       <p
                         style={{
@@ -155,7 +153,7 @@ const FullPackages = () => {
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
-                      marginBottom:"3%"
+                      marginBottom: "3%",
                     }}
                   >
                     <div style={{ marginRight: "10px" }}>
@@ -188,21 +186,26 @@ const FullPackages = () => {
                 </div>
               </Col>
             </Row>
-            <img src={reqdeltail.Pimage} alt="gt" style={{width:"100%",height:"50%",marginTop:"1%"}}/>
+            <img
+              src={reqdeltail.Pimage}
+              alt="gt"
+              style={{ width: "100%", height: "50%", marginTop: "1%" }}
+            />
           </Col>
-          <Col md={4} className="text-center" style={{display:"flex"}}>
-            <Bookform/>
-           
-            
-            
-
+          <Col md={4} className="text-center" style={{ display: "flex" }}>
+            <Bookform />
           </Col>
         </Row>
         <hr></hr>
 
-        <h3 className="text-center" style={{marginTop:"4%"}}>You might also like</h3>
+        <h3 className="text-center" style={{ marginTop: "4%" }}>
+          You might also like
+        </h3>
+        <br></br>
+        <Random />
       </Container>
-
+      <Footer/>
+      
     </>
   );
 };

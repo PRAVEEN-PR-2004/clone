@@ -9,6 +9,8 @@ import { RiSpeakLine } from "react-icons/ri";
 import { GrGroup } from "react-icons/gr";
 import { LuClock } from "react-icons/lu";
 import Bookform from "./Bookform";
+import Random from "./Random";
+import Footer from "./Footer";
 
 
 const ShowGtours = () => {
@@ -201,7 +203,10 @@ const ShowGtours = () => {
         <hr></hr>
 
         <h3 className="text-center" style={{marginTop:"4%"}}>You might also like</h3>
+        <br></br>
+        <Random/>
       </Container>
+      <Footer/>
 
     </>
   );

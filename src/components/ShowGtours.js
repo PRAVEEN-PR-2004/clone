@@ -200,7 +200,11 @@ const ShowGtours = () => {
 
           </Col>
         </Row>
-       <br></br>
+        <h3 className="text-center" style={{ marginTop: "4%" }}>
+          You might also like
+        </h3>
+        <br></br>
+        <Random />
        
       </Container>
       <Footer/>

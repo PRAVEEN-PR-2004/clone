@@ -3,7 +3,7 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { MdAddLocationAlt } from "react-icons/md";
 import { FaChild } from "react-icons/fa";
-import './TextCard.css'
+import '../style/TextCard.css'
 
 const ThreeCardsRow = () => {
   return (

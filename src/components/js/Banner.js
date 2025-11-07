@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import './Banner.css';
+import '../style/Banner.css';
 
 const Banner = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -25,13 +25,13 @@ const Banner = () => {
           {isSmallScreen ? (
             <img
               className='d-block w-100 carousel-image'
-              src={require('../assets/lion22.jpg')}
+              src={require('../../assets/lion22.jpg')}
               alt=''
             />
           ) : (
             <img
               className='d-block w-100 carousel-image'
-              src={require('../assets/lion.jpg')}
+              src={require('../../assets/lion.jpg')}
               alt=''
             />
           )}
@@ -46,13 +46,13 @@ const Banner = () => {
           {isSmallScreen ? (
             <img
               className='d-block w-100 carousel-image'
-              src={require('../assets/mountain22.jpg')}
+              src={require('../../assets/mountain22.jpg')}
               alt=''
             />
           ) : (
             <img
               className='d-block w-100 carousel-image'
-              src={require('../assets/mountain.jpg')}
+              src={require('../../assets/mountain.jpg')}
               alt=''
             />
           )}
@@ -67,13 +67,13 @@ const Banner = () => {
           {isSmallScreen ? (
             <img
               className='d-block w-100 carousel-image'
-              src={require('../assets/lake.jpg')}
+              src={require('../../assets/lake.jpg')}
               alt=''
             />
           ) : (
             <img
               className='d-block w-100 carousel-image'
-              src={require('../assets/lake.jpg')}
+              src={require('../../assets/lake.jpg')}
               alt=''
             />
           )}

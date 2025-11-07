@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import Allwedding from '../components/Allwedding'
+import Allwedding from '../components/js/Allwedding'
 
 const Wedding = () => {
   useEffect(() => {

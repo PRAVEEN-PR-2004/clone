@@ -1,11 +1,11 @@
 import React from 'react';
 import { PACKAGES } from './Gtpackages';
 import { Card, Row, Col, Container } from 'react-bootstrap';
-import grouptourimg from "../assets/grouptour.jpg"; 
+import grouptourimg from "../../assets/grouptour.jpg"; 
 import Address from './Address';
 import { FaLocationDot } from "react-icons/fa6";
 import { CiClock2 } from "react-icons/ci";
-import './TourGroup.css'
+import '../style/TourGroup.css'
 import { Link } from 'react-router-dom';
 const TourGroup = () => {
   return (

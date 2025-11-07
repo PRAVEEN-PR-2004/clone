@@ -7,8 +7,8 @@ import {
   NavDropdown,
   Offcanvas,
 } from "react-bootstrap";
-import "./Appbar.css";
-import logog from "../assets/GT-Holidays-Logo.jpg";
+import "../style/Appbar.css";
+import logog from "../../assets/GT-Holidays-Logo.jpg";
 
 function Appbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

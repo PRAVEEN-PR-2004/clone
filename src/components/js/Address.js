@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios"; // Import axios
-import "./Address.css";
+import "../style/Address.css";
 import { Col, Form, Row, Button } from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";

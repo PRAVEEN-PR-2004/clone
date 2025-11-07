@@ -2,13 +2,13 @@ import React from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import s1 from '../assets/2s1.jpg'
-import s2 from '../assets/2s2.jpg'
-import s3 from '../assets/2s3.jpg'
-import s4 from '../assets/2s4.jpg'
-import s5 from '../assets/2s5.jpg'
-import s6 from '../assets/2s6.jpg'
-import s7 from '../assets/2s7.jpg'
+import s1 from '../../assets/2s1.jpg'
+import s2 from '../../assets/2s2.jpg'
+import s3 from '../../assets/2s3.jpg'
+import s4 from '../../assets/2s4.jpg'
+import s5 from '../../assets/2s5.jpg'
+import s6 from '../../assets/2s6.jpg'
+import s7 from '../../assets/2s7.jpg'
 import { Link } from "react-router-dom";
 
 const Slider2 = () => {

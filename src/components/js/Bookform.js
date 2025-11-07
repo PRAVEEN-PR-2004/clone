@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import "./Bookform.css"; // Import the CSS file for custom styles
+import "../style/Bookform.css"; // Import the CSS file for custom styles
 import axios from "axios"; // Import axios for API requests
 
 const Bookform = () => {

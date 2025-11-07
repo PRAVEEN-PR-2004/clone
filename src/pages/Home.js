@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 
-import Banner from "../components/Banner";
-import TextCard from "../components/TextCard";
-import ImgBanner from "../components/imgbanner";
+import Banner from "../components/js/Banner";
+import TextCard from "../components/js/TextCard";
+import ImgBanner from "../components/js/imgbanner";
 
-import Spot from "../components/Spot";
-import Content from "../components/Content";
-import Address from "../components/Address";
-import Familytour from "../components/Familytour";
-import Footer from "../components/Footer";
-import Slider1 from "../components/Slider1";
-import Slider2 from "../components/Slider2";
-import Slider3 from "../components/Slider3";
+import Spot from "../components/js/Spot";
+import Content from "../components/js/Content";
+import Address from "../components/js/Address";
+import Familytour from "../components/js/Familytour";
+import Footer from "../components/js/Footer";
+import Slider1 from "../components/js/Slider1";
+import Slider2 from "../components/js/Slider2";
+import Slider3 from "../components/js/Slider3";
 
 const Home = () => {
   useEffect(() => {

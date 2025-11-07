@@ -1,5 +1,5 @@
 import React from 'react'
-import thnakimg from '../assets/thank.png'
+import thnakimg from '../../assets/thank.png'
 import Linkcom from './Linkcom'
 const Thankyou = () => {
   return (

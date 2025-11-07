@@ -8,9 +8,9 @@ import cruises5 from "../assets/cruises5.jpg";
 import cruises6 from "../assets/cruises6.jpg";
 import cruises7 from "../assets/cruises7.jpg";
 
-import Linkcom from "../components/Linkcom";
+import Linkcom from "../components/js/Linkcom";
 import { Col, Container, Row } from "react-bootstrap";
-import Footer from "../components/Footer";
+import Footer from "../components/js/Footer";
 
 const Cruises = () => {
   useEffect(() => {

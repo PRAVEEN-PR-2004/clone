@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { CITY } from '../components/City';
+import { CITY } from '../components/js/City';
 import { useParams } from 'react-router-dom';
-import Linkcom from '../components/Linkcom';
+import Linkcom from '../components/js/Linkcom';
 import { Col, Container, Row } from 'react-bootstrap';
 
-import Footer from '../components/Footer';
-import Address from '../components/Address';
+import Footer from '../components/js/Footer';
+import Address from '../components/js/Address';
 
 const Contact = () => {
   const { city } = useParams();

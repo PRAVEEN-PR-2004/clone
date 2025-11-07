@@ -2,10 +2,10 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import s1 from '../assets/wed4.png'
-import s2 from '../assets/wed5.png'
-import s3 from '../assets/wed6.png'
-import s4 from '../assets/5s1.png'
+import s1 from '../../assets/wed4.png'
+import s2 from '../../assets/wed5.png'
+import s3 from '../../assets/wed6.png'
+import s4 from '../../assets/5s1.png'
 
 
 

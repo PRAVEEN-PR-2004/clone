@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pack from "../assets/packagesimg.jpg.png";
+import pack from "../../assets/packagesimg.jpg.png";
 import { Card, Row, Col, Container } from "react-bootstrap";
 
 import Form from "react-bootstrap/Form";
@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import { FaLocationDot } from "react-icons/fa6";
 import { CiClock2 } from "react-icons/ci";
 import { ALLPACKAGES } from "./Allpackages";
-import './TourPackages.css'
+import '../style/TourPackages.css'
 import { Link } from 'react-router-dom';
 
 const TourPackages = () => {

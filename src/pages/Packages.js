@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
-import TourPackages from '../components/TourPackages'
-import Footer from '../components/Footer'
+import TourPackages from '../components/js/TourPackages'
+import Footer from '../components/js/Footer'
 
 const Packages = () => {
   useEffect(() => {

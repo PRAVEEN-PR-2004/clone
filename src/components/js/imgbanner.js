@@ -1,5 +1,5 @@
 import React from 'react';
-import holidaysImage from "../assets/holidays.jpeg";
+import holidaysImage from "../../assets/holidays.jpeg";
 
 const ImgBanner = () => {
   return (

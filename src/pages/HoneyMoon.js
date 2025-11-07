@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import Allhoneymoon from '../components/Allhoneymoon'
+import Allhoneymoon from '../components/js/Allhoneymoon'
 
 const HoneyMoon = () => {
   useEffect(() => {

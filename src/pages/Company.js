@@ -1,12 +1,12 @@
 import React,{useEffect} from 'react';
-import Linkcom from "../components/Linkcom";
+import Linkcom from "../components/js/Linkcom";
 import companyimg from '../assets/companyimg.png'
 import companyimg1 from '../assets/companyimg2.jpg'
 import companyimg2 from '../assets/com.png'
 import owner from '../assets/owner.jpg'
 
 import { Col,Row, Container,Card } from 'react-bootstrap';
-import Footer from '../components/Footer';
+import Footer from '../components/js/Footer';
 const Company = () => {
   useEffect(() => {
     window.scrollTo(0, 0); 

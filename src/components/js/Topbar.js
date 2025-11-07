@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import './Topbar.css'
+import '../style/Topbar.css'
 
 function Topbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

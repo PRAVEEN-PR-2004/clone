@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import family from "../assets/family.jpg";
+import family from "../../assets/family.jpg";
 
 const Familytour = () => {
   return (

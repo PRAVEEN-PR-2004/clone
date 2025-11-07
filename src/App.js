@@ -10,10 +10,10 @@ import Packages from './pages/Packages';
 import Wedding from './pages/Wedding';
 import Company from './pages/Company';
 
-import Appbar from './components/Appbar';
-import Topbar from './components/Topbar'
-import FullPackages from './components/FullPackages';
-import ShowGtours from './components/ShowGtours';
+import Appbar from './components/js/Appbar';
+import Topbar from './components/js/Topbar'
+import FullPackages from './components/js/FullPackages';
+import ShowGtours from './components/js/ShowGtours';
 
 function App() {
   return (

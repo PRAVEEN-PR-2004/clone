@@ -27,17 +27,23 @@ function Topbar() {
       <Navbar className="changetop justify-content-start">
         <Container>
           {isSmallScreen ? (
-            <Navbar.Brand href="#home">
-              <span className="icon-container">
+            <div className="icon-container">
+              <a href="https://www.facebook.com/gtholidays/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} style={{ color: 'yellow', marginRight: '10px' }} />
+              </a>
+              <a href="https://www.instagram.com/gtholidays.in/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faInstagram} style={{ color: 'yellow', marginRight: '10px' }} />
-              </span>
-            </Navbar.Brand>
+              </a>
+            </div>
           ) : (
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="home">
               <span className="icon-container">
-                <FontAwesomeIcon icon={faFacebook} style={{ color: 'yellow', marginRight: '10px' }} />
-                <FontAwesomeIcon icon={faInstagram} style={{ color: 'yellow', marginRight: '10px' }} />
+                <a href="https://www.facebook.com/gtholidays/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faFacebook} style={{ color: 'yellow', marginRight: '10px' }} />
+                </a>
+                <a href="https://www.instagram.com/gtholidays.in/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} style={{ color: 'yellow', marginRight: '10px' }} />
+                </a>
               </span>
               <span className='add'>| </span>
               <span className="mail-address">mail@gtholidays.in</span>
@@ -45,20 +51,17 @@ function Topbar() {
           )}
         </Container>
         {isSmallScreen ? (
-
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            <span className='no'></span>
-          </Navbar.Text>
-        </Navbar.Collapse>
-
-        ):
-        (
           <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            <span className='no'>+91 9597412167</span>
-          </Navbar.Text>
-        </Navbar.Collapse>
+            <Navbar.Text>
+              <span className='no'></span>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        ) : (
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              <span className='no'>+91 9597412167</span>
+            </Navbar.Text>
+          </Navbar.Collapse>
         )}
       </Navbar>
     </>

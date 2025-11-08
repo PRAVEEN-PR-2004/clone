@@ -38,18 +38,15 @@ function Appbar() {
           className="changenav mb-3 sticky-top"
         >
           <Container fluid>
-            <Navbar.Brand
-              href="#home"
-              className="d-flex justify-content-center  ml-md-3"
-            >
-              <img
-                src={logog}
-                width={isSmallScreen ? "150" : "250"}
-                height="100"
-                className="d-inline-block align-top img-fluid mx-auto img-responsive"
-                alt="GT Holidays Logo"
-              />
-            </Navbar.Brand>
+          <Link to="/" className="d-flex justify-content-center ml-md-3 navbar-brand">
+  <img
+    src={logog}
+    width={isSmallScreen ? "150" : "250"}
+    height="100"
+    className="d-inline-block align-top img-fluid mx-auto img-responsive"
+    alt="GT Holidays Logo"
+  />
+</Link>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  onClick={() => setShowOffcanvas(!showOffcanvas)}/>
             <Navbar.Offcanvas

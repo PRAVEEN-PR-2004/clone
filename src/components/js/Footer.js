@@ -268,14 +268,25 @@ const Footer = () => {
                   }}
                 />
 
-                <p className="mt-4" style={{ color: "#BDBDBD" }}>
-                  {" "}
-                  <FaInstagram size={25} style={{ marginLeft: "10px" }} />
-                  <FaFacebookF size={25} style={{ marginLeft: "10px" }} />
-                  <FaLinkedinIn size={25} style={{ marginLeft: "10px" }} />
-                  <FaYoutube size={25} style={{ marginLeft: "10px" }} />
-                  <FaGoogle size={25} style={{ marginLeft: "10px" }} />
-                </p>
+   <p className="mt-4" style={{ color: "#BDBDBD" }}>
+  <a href="https://www.instagram.com/gtholidays.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+    <FaInstagram size={25} style={{ marginLeft: "10px" }} />
+  </a>
+  <a href="https://www.facebook.com/gtholidays/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+    <FaFacebookF size={25} style={{ marginLeft: "10px" }} />
+  </a>
+  <a href="https://www.linkedin.com/company/gtholidays/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+    <FaLinkedinIn size={25} style={{ marginLeft: "10px" }} />
+  </a>
+  <a href="https://www.youtube.com/@GTHolidaysLtd" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+    <FaYoutube size={25} style={{ marginLeft: "10px" }} />
+  </a>
+  <a href="https://gtholidays.netlify.app/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+    <FaGoogle size={25} style={{ marginLeft: "10px" }} />
+  </a>
+</p>
+
+
               </div>
             </Col>
           </Row>

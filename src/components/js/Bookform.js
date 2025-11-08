@@ -23,7 +23,7 @@ const Bookform = () => {
     e.preventDefault(); // Prevent page refresh
     try {
       const response = await axios.post(
-        "http://localhost:3000/submitData",
+        "https://gtholidays-server.onrender.com/submitData",
         formData
       );
       if (response.status === 201) {

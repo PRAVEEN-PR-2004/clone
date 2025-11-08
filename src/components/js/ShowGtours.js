@@ -1,6 +1,6 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { PACKAGES } from "./Gtpackages";
+import { getPackageById } from "../../utils/api";
 import { Col, Container, Row } from "react-bootstrap";
 import Linkcom from "./Linkcom";
 import { FaLocationDot } from "react-icons/fa6";
@@ -15,10 +15,31 @@ import Footer from "./Footer";
 
 const ShowGtours = () => {
   const { id } = useParams();
-  const reqdeltail = PACKAGES.find((pack) => pack.id === parseInt(id));
+  const [reqdeltail, setReqdeltail] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    window.scrollTo(0, 0); 
-  }, []);
+    window.scrollTo(0, 0);
+    const fetchPackage = async () => {
+      try {
+        const data = await getPackageById(id);
+        setReqdeltail(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching package:', error);
+        setLoading(false);
+      }
+    };
+    fetchPackage();
+  }, [id]);
+
+  if (loading) {
+    return <Container className="mt-5">Loading...</Container>;
+  }
+
+  if (!reqdeltail) {
+    return <Container className="mt-5">Package not found</Container>;
+  }
   return (
     <>
       <Linkcom children={"GroupTour"} />
@@ -204,7 +225,7 @@ const ShowGtours = () => {
           You might also like
         </h3>
         <br></br>
-        <Random />
+        <Random currentPackageId={reqdeltail._id} />
        
       </Container>
       <Footer/>

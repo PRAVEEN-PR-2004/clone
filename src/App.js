@@ -9,6 +9,10 @@ import GroupTour from './pages/GroupTour';
 import Packages from './pages/Packages';
 import Wedding from './pages/Wedding';
 import Company from './pages/Company';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import AdminPackages from './pages/AdminPackages';
+import AdminSubmissions from './pages/AdminSubmissions';
 
 import Appbar from './components/js/Appbar';
 import Topbar from './components/js/Topbar'
@@ -31,6 +35,10 @@ function App() {
       <Route path='/contact/:city' element={<Contact/>}></Route>
       <Route path='/fullpackage/:id' element={<FullPackages/>}></Route>
       <Route path='/showgrouptour/:id' element={<ShowGtours/>}></Route>
+      <Route path='/admin/login' element={<AdminLogin/>}></Route>
+      <Route path='/admin/dashboard' element={<AdminDashboard/>}></Route>
+      <Route path='/admin/packages' element={<AdminPackages/>}></Route>
+      <Route path='/admin/submissions' element={<AdminSubmissions/>}></Route>
     </Routes>
    </>
   );

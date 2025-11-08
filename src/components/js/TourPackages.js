@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pack from "../../assets/packagesimg.jpg.png";
 import { Card, Row, Col, Container } from "react-bootstrap";
 
@@ -6,14 +6,30 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { FaLocationDot } from "react-icons/fa6";
 import { CiClock2 } from "react-icons/ci";
-import { ALLPACKAGES } from "./Allpackages";
+import { getPackages } from "../../utils/api";
 import '../style/TourPackages.css'
 import { Link } from 'react-router-dom';
 
 const TourPackages = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const filteredPackages = ALLPACKAGES.filter((tourPackage) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getPackages('ALLPACKAGES');
+        setPackages(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching packages:', error);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const filteredPackages = packages.filter((tourPackage) => {
     return (
       tourPackage.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
       tourPackage.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -63,12 +79,15 @@ const TourPackages = () => {
           </Col>
         </Row>
         <p className="mt-2" style={{ fontSize: "larger" }}>
-          {filteredPackages.length} tours found
+          {loading ? 'Loading...' : `${filteredPackages.length} tours found`}
         </p>
         <Row className="package-container mt-4">
-          {filteredPackages.map((tourPackage) => (
+          {loading ? (
+            <Col>Loading packages...</Col>
+          ) : (
+            filteredPackages.map((tourPackage) => (
             <Col
-              key={tourPackage.id}
+              key={tourPackage._id}
               xs={12}
               sm={6}
               md={4}
@@ -76,7 +95,7 @@ const TourPackages = () => {
               className="mb-5"
             >
               <Card className="mb-3 h-100">
-              <Link to={`/fullpackage/${tourPackage.id}`} children={tourPackage}>
+              <Link to={`/fullpackage/${tourPackage._id}`} children={tourPackage}>
                 <div className="image-container">
                   <Card.Img
                     variant="top"
@@ -98,7 +117,8 @@ const TourPackages = () => {
                 </Card.Body>
               </Card>
             </Col>
-          ))}
+          ))
+          )}
         </Row>
       </Container>
     </>

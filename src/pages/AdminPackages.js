@@ -188,7 +188,7 @@ const AdminPackages = () => {
             <Button variant="secondary" onClick={() => setShowModal(false)}>
               Cancel
             </Button>
-            <Button variant="primary" type="submit">
+            <Button style={{ backgroundColor: '#ffcc00', color: 'black' }} type="submit">
               {editingPackage ? 'Update' : 'Create'}
             </Button>
           </Modal.Footer>

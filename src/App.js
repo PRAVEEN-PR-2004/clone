@@ -18,6 +18,7 @@ import Appbar from './components/js/Appbar';
 import Topbar from './components/js/Topbar'
 import FullPackages from './components/js/FullPackages';
 import ShowGtours from './components/js/ShowGtours';
+import AIAssistant from './components/js/AIAssistant';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <Route path='/admin/packages' element={<AdminPackages/>}></Route>
       <Route path='/admin/submissions' element={<AdminSubmissions/>}></Route>
     </Routes>
+    <AIAssistant/>
    </>
   );
 }

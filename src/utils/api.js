@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://gtholidays-server.onrender.com:3000/api';
+const API_BASE_URL = 'https://gtholidays-server.onrender.com/api';
 
 // Package API calls
 export const getPackages = async (type = null) => {

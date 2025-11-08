@@ -13,7 +13,7 @@ const Random = ({ currentPackageId = null }) => {
     const fetchRandomPackages = async () => {
       try {
         // Fetch all packages
-        const allPackages = await getPackages('ALLPACKAGES');
+        const allPackages = await getPackages();
         
         // Exclude the current package if provided
         const filteredPackages = currentPackageId

@@ -27,7 +27,7 @@ const AdminDashboard = () => {
             <Card.Body className="d-flex flex-column">
               <Card.Title>Manage Packages</Card.Title>
               <Card.Text className="flex-grow-1">
-                Add, edit, or delete tour packages (ALLPACKAGES and PACKAGES)
+                Add, edit, or delete tour packages
               </Card.Text>
               <Link to="/admin/packages">
                 <Button style={{ backgroundColor: '#ffcc00', color: 'black' }} className="w-100">Manage Packages</Button>

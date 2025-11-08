@@ -3,9 +3,8 @@ import axios from 'axios';
 const API_BASE_URL = 'https://gtholidays-server.onrender.com/api';
 
 // Package API calls
-export const getPackages = async (type = null) => {
-  const url = type ? `${API_BASE_URL}/packages?type=${type}` : `${API_BASE_URL}/packages`;
-  const response = await axios.get(url);
+export const getPackages = async () => {
+  const response = await axios.get(`${API_BASE_URL}/packages`);
   return response.data;
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Table, Button, Modal, Form, Alert, Badge } from 'react-bootstrap';
+import { Container, Table, Button, Modal, Form, Alert } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,8 +11,7 @@ const AdminPackages = () => {
     location: '',
     name: '',
     day: '',
-    Pimage: '',
-    packageType: 'ALLPACKAGES'
+    Pimage: ''
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -41,8 +40,7 @@ const AdminPackages = () => {
       location: '',
       name: '',
       day: '',
-      Pimage: '',
-      packageType: 'ALLPACKAGES'
+      Pimage: ''
     });
     setShowModal(true);
   };
@@ -53,8 +51,7 @@ const AdminPackages = () => {
       location: pkg.location,
       name: pkg.name,
       day: pkg.day,
-      Pimage: pkg.Pimage,
-      packageType: pkg.packageType
+      Pimage: pkg.Pimage
     });
     setShowModal(true);
   };
@@ -95,7 +92,7 @@ const AdminPackages = () => {
 
   return (
     <Container className="mt-5">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-4">
         <h2>Manage Packages</h2>
         <Button variant="success" onClick={handleAdd}>
           Add New Package
@@ -105,45 +102,38 @@ const AdminPackages = () => {
       {error && <Alert variant="danger">{error}</Alert>}
       {success && <Alert variant="success">{success}</Alert>}
 
-      <Table striped bordered hover>
+      <Table responsive striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>ID</th>
             <th>Name</th>
-            <th>Location</th>
-            <th>Duration</th>
-            <th>Type</th>
+            <th className="d-none d-sm-table-cell">Location</th>
+            <th className="d-none d-sm-table-cell">Duration</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {packages.map((pkg) => (
             <tr key={pkg._id}>
-              <td>{pkg._id}</td>
-              <td>{pkg.name}</td>
-              <td>{pkg.location}</td>
-              <td>{pkg.day}</td>
+              <td className="text-break">{pkg.name}</td>
+              <td className="d-none d-sm-table-cell text-break">{pkg.location}</td>
+              <td className="d-none d-sm-table-cell">{pkg.day}</td>
               <td>
-                <Badge bg={pkg.packageType === 'ALLPACKAGES' ? 'primary' : 'info'}>
-                  {pkg.packageType}
-                </Badge>
-              </td>
-              <td>
-                <Button
-                  variant="warning"
-                  size="sm"
-                  className="me-2"
-                  onClick={() => handleEdit(pkg)}
-                >
-                  Edit
-                </Button>
-                <Button
-                  variant="danger"
-                  size="sm"
-                  onClick={() => handleDelete(pkg._id)}
-                >
-                  Delete
-                </Button>
+                <div className="d-flex flex-column flex-sm-row gap-2">
+                  <Button
+                    variant="warning"
+                    size="sm"
+                    onClick={() => handleEdit(pkg)}
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    onClick={() => handleDelete(pkg._id)}
+                  >
+                    Delete
+                  </Button>
+                </div>
               </td>
             </tr>
           ))}
@@ -192,16 +182,6 @@ const AdminPackages = () => {
                 placeholder="Enter image URL or path"
                 required
               />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Package Type</Form.Label>
-              <Form.Select
-                value={formData.packageType}
-                onChange={(e) => setFormData({ ...formData, packageType: e.target.value })}
-              >
-                <option value="ALLPACKAGES">ALLPACKAGES</option>
-                <option value="PACKAGES">PACKAGES</option>
-              </Form.Select>
             </Form.Group>
           </Modal.Body>
           <Modal.Footer>

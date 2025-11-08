@@ -15,7 +15,7 @@ const TourGroup = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getPackages('PACKAGES');
+        const data = await getPackages();
         setPackages(data);
         setLoading(false);
       } catch (error) {

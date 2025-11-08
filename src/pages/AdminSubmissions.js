@@ -19,7 +19,7 @@ const AdminSubmissions = () => {
 
   const fetchSubmissions = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/submissions');
+      const response = await axios.get('https://gtholidays-server.onrender.com/api/submissions');
       setSubmissions(response.data);
       setLoading(false);
     } catch (err) {

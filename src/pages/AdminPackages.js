@@ -28,7 +28,7 @@ const AdminPackages = () => {
 
   const fetchPackages = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/packages');
+      const response = await axios.get('https://gtholidays-server.onrender.com/api/packages');
       setPackages(response.data);
     } catch (err) {
       setError('Error fetching packages');
@@ -62,7 +62,7 @@ const AdminPackages = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this package?')) {
       try {
-        await axios.delete(`http://localhost:3000/api/packages/${id}`);
+        await axios.delete(`https://gtholidays-server.onrender.com/api/packages/${id}`);
         setSuccess('Package deleted successfully');
         fetchPackages();
         setTimeout(() => setSuccess(''), 3000);
@@ -79,10 +79,10 @@ const AdminPackages = () => {
 
     try {
       if (editingPackage) {
-        await axios.put(`http://localhost:3000/api/packages/${editingPackage._id}`, formData);
+        await axios.put(`https://gtholidays-server.onrender.com/api/packages/${editingPackage._id}`, formData);
         setSuccess('Package updated successfully');
       } else {
-        await axios.post('http://localhost:3000/api/packages', formData);
+        await axios.post('https://gtholidays-server.onrender.com/api/packages', formData);
         setSuccess('Package created successfully');
       }
       setShowModal(false);

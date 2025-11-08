@@ -217,6 +217,14 @@ const Footer = () => {
                   Salem
                   </Link>
                 </li>
+                <li
+                  style={{ fontSize: "12px", color: "#BDBDBD" }}
+                  className="mb-0"
+                >
+                  <Link to='/admin/login' style={{textDecoration:"none",color:"inherit"}}>
+                  Admin
+                  </Link>
+                </li>
               </ul>
             </Col>
           </Row>

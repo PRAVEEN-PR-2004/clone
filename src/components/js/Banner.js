@@ -57,10 +57,10 @@ const Banner = () => {
             />
           )}
           <Carousel.Caption>
-            <h3 style={{ fontWeight: '700', color: 'yellow' }}>extraordinary</h3>
-            <p className='d-none d-sm-block'>
-              The real voyage of discovery consists not in seeking new landscapes, but in having new eyes. Discover it with GT Holidays, the No.1 brand in south India.
-            </p>
+           <h3 style={{ fontWeight: '700', color: 'yellow' }}>Into the Wild</h3>
+      <p className='d-none d-sm-block'>
+        Discover the mysteries of deep forests and reconnect with nature like never before with GT Holidays.
+      </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -78,10 +78,11 @@ const Banner = () => {
             />
           )}
           <Carousel.Caption>
-            <h3 style={{ fontWeight: '700', color: 'yellow' }}>extraordinary</h3>
-            <p className='d-none d-sm-block'>
-              The real voyage of discovery consists not in seeking new landscapes, but in having new eyes. Discover it with GT Holidays, the No.1 brand in south India.
-            </p>
+       
+       <h3 style={{ fontWeight: '700', color: 'yellow' }}>Peaceful Waters</h3>
+      <p className='d-none d-sm-block'>
+        Unwind by crystal-clear lakes and enjoy peaceful retreats with GT Holidays.
+      </p>
           </Carousel.Caption>
         </Carousel.Item>
         

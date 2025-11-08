@@ -78,9 +78,7 @@ const TourPackages = () => {
             
           </Col>
         </Row>
-        <p className="mt-2" style={{ fontSize: "larger" }}>
-          {loading ? 'Loading...' : `${filteredPackages.length} tours found`}
-        </p>
+        
         <Row className="package-container mt-4">
           {loading ? (
             <Col>Loading packages...</Col>

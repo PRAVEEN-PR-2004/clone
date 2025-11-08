@@ -53,8 +53,8 @@ const AIAssistant = () => {
       <button
         aria-label="Open AI Assistant"
         onClick={() => setOpen((v) => !v)}
-        className="btn btn-warning rounded-circle position-fixed bottom-0 start-0 m-3 d-flex align-items-center justify-content-center shadow"
-        style={{ width: 56, height: 56, zIndex: 9999, fontSize: 24, fontWeight: 700, color: '#111' }}
+        className="btn rounded-circle position-fixed bottom-0 start-0 m-3 d-flex align-items-center justify-content-center shadow"
+        style={{ width: 56, height: 56, zIndex: 9999, fontSize: 24, fontWeight: 700, color: '#111', backgroundColor: '#ffcc00', borderColor: '#ffcc00' }}
       >
         🤖
       </button>
@@ -67,9 +67,9 @@ const AIAssistant = () => {
         >
           <div className="card" style={{ borderRadius: 12, overflow: 'hidden' }}>
             {/* Header */}
-            <div className="card-header d-flex align-items-center justify-content-between bg-warning">
+            <div className="card-header d-flex align-items-center justify-content-between" style={{ backgroundColor: '#ffcc00' }}>
               <div className="d-flex align-items-center gap-2">
-                <div className="d-inline-flex align-items-center justify-content-center rounded-circle" style={{ width: 28, height: 28, background: '#111', color: '#f7c200', fontWeight: 700 }}>gt</div>
+                <div className="d-inline-flex align-items-center justify-content-center rounded-circle" style={{ width: 28, height: 28, background: '#111', color: '#ffcc00', fontWeight: 700 }}>gt</div>
                 <div>
                   <div className="fw-bold text-dark">GT Holidays</div>
                   <div className="small text-dark-50" style={{ opacity: .8 }}>AI Assistant</div>
@@ -82,7 +82,14 @@ const AIAssistant = () => {
             <div className="card-body p-2" style={{ background: '#fafafa', maxHeight: 300, overflowY: 'auto' }}>
               {messages.map((m, idx) => (
                 <div key={idx} className={`d-flex mb-2 ${m.role === 'user' ? 'justify-content-end' : 'justify-content-start'}`}>
-                  <div className={`p-2 rounded ${m.role === 'user' ? 'bg-warning' : 'bg-white'} shadow-sm`} style={{ maxWidth: '80%', color: '#111' }}>
+                  <div
+                    className="p-2 rounded shadow-sm"
+                    style={{
+                      maxWidth: '80%',
+                      color: '#111',
+                      background: m.role === 'user' ? '#ffcc00' : '#ffffff'
+                    }}
+                  >
                     {m.text}
                   </div>
                 </div>

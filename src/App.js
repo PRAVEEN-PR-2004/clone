@@ -13,6 +13,7 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminPackages from './pages/AdminPackages';
 import AdminSubmissions from './pages/AdminSubmissions';
+import NotFound from './pages/NotFound';
 
 import Appbar from './components/js/Appbar';
 import Topbar from './components/js/Topbar'
@@ -40,6 +41,7 @@ function App() {
       <Route path='/admin/dashboard' element={<AdminDashboard/>}></Route>
       <Route path='/admin/packages' element={<AdminPackages/>}></Route>
       <Route path='/admin/submissions' element={<AdminSubmissions/>}></Route>
+      <Route path='*' element={<NotFound/>}></Route>
     </Routes>
     <AIAssistant/>
    </>

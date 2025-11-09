@@ -1,15 +1,12 @@
-import React from 'react'
+
 import weddingimg from '../../assets/weddingimg.png'
 import Linkcom from './Linkcom'
 import w1 from '../../assets/wed1.png'
 import w2 from '../../assets/wed2.png'
  import w3 from '../../assets/wed3.png'
-// import w4 from '../../assets/wed4.png'
-// import w5 from '../../assets/wed5.png'
 import w7 from '../../assets/wed7.png'
 import w8 from '../../assets/wed8.png'
 import '../style/Allhoneymoon.css'
-// import w6 from '../../assets/wed6.png'
 import { Col, Container, Row } from 'react-bootstrap';
 
 import Bookform from './Bookform'

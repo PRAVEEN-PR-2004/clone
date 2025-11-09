@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import axios from "axios";
 
-// Simple floating chat widget that talks to the local Python server
-// Env override: set REACT_APP_PYTHON_API to something like https://your-host:5001
-const PYTHON_API =  'https://gt-holidays-chatbot.onrender.com';
+const PYTHON_API = 'https://gt-holidays-chatbot.onrender.com';
 
 const AIAssistant = () => {
   const [open, setOpen] = useState(false);
@@ -31,17 +30,17 @@ const AIAssistant = () => {
     setMessages((m) => [...m, { role: 'user', text }]);
     setInput('');
     setLoading(true);
+
     try {
-      const res = await fetch(`${PYTHON_API}/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Server error');
-      setMessages((m) => [...m, { role: 'assistant', text: data.reply || 'No reply' }]);
+      const res = await axios.post(`${PYTHON_API}/chat`, { message: text });
+
+      setMessages((m) => [
+        ...m,
+        { role: 'assistant', text: res.data.reply || 'No reply' }
+      ]);
+
     } catch (err) {
-      setError(err.message || 'Failed to reach AI server');
+      setError(err?.response?.data?.error || 'Failed to reach AI server');
     } finally {
       setLoading(false);
     }
@@ -49,7 +48,6 @@ const AIAssistant = () => {
 
   return (
     <>
-      {/* Floating button */}
       <button
         aria-label="Open AI Assistant"
         onClick={() => setOpen((v) => !v)}
@@ -59,7 +57,6 @@ const AIAssistant = () => {
         🤖
       </button>
 
-      {/* Popup card */}
       {open && (
         <div
           className="position-fixed bottom-0 start-0 mb-5 ms-3 shadow"
@@ -78,7 +75,6 @@ const AIAssistant = () => {
               <button onClick={() => setOpen(false)} className="btn btn-sm btn-outline-dark border-0">×</button>
             </div>
 
-            {/* Messages */}
             <div className="card-body p-2" style={{ background: '#fafafa', maxHeight: 300, overflowY: 'auto' }}>
               {messages.map((m, idx) => (
                 <div key={idx} className={`d-flex mb-2 ${m.role === 'user' ? 'justify-content-end' : 'justify-content-start'}`}>
@@ -100,7 +96,6 @@ const AIAssistant = () => {
               <div ref={endRef} />
             </div>
 
-            {/* Composer */}
             <form onSubmit={sendMessage} className="card-footer d-flex gap-2">
               <input
                 ref={inputRef}

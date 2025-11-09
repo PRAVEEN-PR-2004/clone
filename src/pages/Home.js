@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 
 import Banner from "../components/js/Banner";
 import TextCard from "../components/js/TextCard";

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import {useEffect} from 'react';
 import TourGroup from '../components/js/TourGroup'
 
 import Footer from '../components/js/Footer'

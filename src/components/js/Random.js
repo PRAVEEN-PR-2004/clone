@@ -12,18 +12,16 @@ const Random = ({ currentPackageId = null }) => {
   useEffect(() => {
     const fetchRandomPackages = async () => {
       try {
-        // Fetch all packages
+       
         const allPackages = await getPackages();
         
-        // Exclude the current package if provided
+        
         const filteredPackages = currentPackageId
           ? allPackages.filter(pkg => pkg._id !== currentPackageId)
           : allPackages;
         
-        // Shuffle the array
         const shuffled = [...filteredPackages].sort(() => Math.random() - 0.5);
         
-        // Take the first 10 packages
         const random = shuffled.slice(0, 10);
         
         setRandomPackages(random);

@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import axios from "axios";
-
-const PYTHON_API = 'https://gt-holidays-chatbot.onrender.com';
+import { sendChat } from "../../utils/api";
 
 const AIAssistant = () => {
   const [open, setOpen] = useState(false);
@@ -32,13 +30,11 @@ const AIAssistant = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${PYTHON_API}/chat`, { message: text });
-
+      const data = await sendChat(text);
       setMessages((m) => [
         ...m,
-        { role: 'assistant', text: res.data.reply || 'No reply' }
+        { role: 'assistant', text: data.reply || 'No reply' }
       ]);
-
     } catch (err) {
       setError(err?.response?.data?.error || 'Failed to reach AI server');
     } finally {

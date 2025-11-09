@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; // Import axios
+import { submitForm } from "../../utils/api";
 import "../style/Address.css";
 import { Col, Form, Row, Button } from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -24,11 +24,8 @@ const Address = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page refresh
     try {
-      const response = await axios.post(
-        "https://gtholidays-server.onrender.com/submitData",
-        formData
-      );
-      if (response.status === 201) {
+      const data = await submitForm(formData);
+      if (data) {
         alert("Form submitted successfully!");
         // Reset form fields after submission
         setFormData({

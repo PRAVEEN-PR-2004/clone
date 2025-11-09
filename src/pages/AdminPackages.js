@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Modal, Form, Alert } from 'react-bootstrap';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { getPackages as apiGetPackages, createPackage, updatePackage, deletePackage } from '../utils/api';
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState([]);
@@ -27,8 +27,8 @@ const AdminPackages = () => {
 
   const fetchPackages = async () => {
     try {
-      const response = await axios.get('https://gtholidays-server.onrender.com/api/packages');
-      setPackages(response.data);
+      const data = await apiGetPackages();
+      setPackages(data);
     } catch (err) {
       setError('Error fetching packages');
     }
@@ -59,7 +59,7 @@ const AdminPackages = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this package?')) {
       try {
-        await axios.delete(`https://gtholidays-server.onrender.com/api/packages/${id}`);
+        await deletePackage(id);
         setSuccess('Package deleted successfully');
         fetchPackages();
         setTimeout(() => setSuccess(''), 3000);
@@ -76,10 +76,10 @@ const AdminPackages = () => {
 
     try {
       if (editingPackage) {
-        await axios.put(`https://gtholidays-server.onrender.com/api/packages/${editingPackage._id}`, formData);
+        await updatePackage(editingPackage._id, formData);
         setSuccess('Package updated successfully');
       } else {
-        await axios.post('https://gtholidays-server.onrender.com/api/packages', formData);
+        await createPackage(formData);
         setSuccess('Package created successfully');
       }
       setShowModal(false);
@@ -94,7 +94,7 @@ const AdminPackages = () => {
     <Container className="mt-5">
       <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-4">
         <h2>Manage Packages</h2>
-        <Button variant="success" onClick={handleAdd}>
+        <Button style={{ backgroundColor: '#ffcc00', color: 'black' }} onClick={handleAdd}>
           Add New Package
         </Button>
       </div>
@@ -120,7 +120,7 @@ const AdminPackages = () => {
               <td>
                 <div className="d-flex flex-column flex-sm-row gap-2">
                   <Button
-                    variant="warning"
+                    style={{ backgroundColor: '#ffcc00', color: 'black' }}
                     size="sm"
                     onClick={() => handleEdit(pkg)}
                   >

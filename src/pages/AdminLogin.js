@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
-import axios from 'axios';
+import { adminLogin } from '../utils/api';
 
 const AdminLogin = () => {
   const [username, setUsername] = useState('');
@@ -14,18 +14,15 @@ const AdminLogin = () => {
     setError('');
 
     try {
-      const response = await axios.post('https://gtholidays-server.onrender.com/api/admin/login', {
-        username,
-        password
-      });
+      const data = await adminLogin({ username, password });
 
-      if (response.data.message === 'Login successful') {
-        localStorage.setItem('adminId', response.data.adminId);
+      if (data.message === 'Login successful') {
+        localStorage.setItem('adminId', data.adminId);
         localStorage.setItem('isAdmin', 'true');
         navigate('/admin/dashboard');
       }
     } catch (err) {
-      setError(err.response?.data?.error || 'Login failed. Please try again.');
+      setError(err?.error || 'Login failed. Please try again.');
     }
   };
 

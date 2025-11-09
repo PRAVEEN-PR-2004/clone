@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "../style/Bookform.css"; // Import the CSS file for custom styles
-import axios from "axios"; // Import axios for API requests
+import { submitForm } from "../../utils/api";
 
 const Bookform = () => {
   const [formData, setFormData] = useState({
@@ -22,11 +22,8 @@ const Bookform = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page refresh
     try {
-      const response = await axios.post(
-        "https://gtholidays-server.onrender.com/submitData",
-        formData
-      );
-      if (response.status === 201) {
+      const data = await submitForm(formData);
+      if (data) {
         alert("Form submitted successfully!");
         // Reset form fields after submission
         setFormData({

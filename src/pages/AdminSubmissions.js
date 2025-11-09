@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Table, Alert, Badge } from 'react-bootstrap';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { getSubmissions } from '../utils/api';
 
 const AdminSubmissions = () => {
   const [submissions, setSubmissions] = useState([]);
@@ -19,8 +19,8 @@ const AdminSubmissions = () => {
 
   const fetchSubmissions = async () => {
     try {
-      const response = await axios.get('https://gtholidays-server.onrender.com/api/submissions');
-      setSubmissions(response.data);
+      const data = await getSubmissions();
+      setSubmissions(data);
       setLoading(false);
     } catch (err) {
       setError('Error fetching submissions');

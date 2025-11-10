@@ -116,6 +116,7 @@ const Address = () => {
                   className="formcontrol"
                   type="date"
                   name="dateOfTravel"
+                  min={new Date().toISOString().split('T')[0]}
                   placeholder="Date of Travel"
                   value={formData.dateOfTravel}
                   onChange={handleChange}
